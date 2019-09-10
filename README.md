@@ -1,4 +1,3 @@
 # firstproject
 
-version 1
 
