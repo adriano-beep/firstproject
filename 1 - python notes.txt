@@ -1,0 +1,5773 @@
+1. Python Data Types
+
+a = 5  
+a=10  
+b="Hi Python"  
+c = 10.5  
+print(type(a))  
+print(type(b))  
+print(type(c))  
+
+<type 'int'>
+<type 'str'>
+<type 'float'>
+
+Standard data types
+
+
+Numbers
+Sequence Type
+Boolean
+Set
+Dictionary
+
+Python Data Types
+
+Numbers
+
+a = 5  
+print("The type of a", type(a))  
+  
+b = 40.5  
+print("The type of b", type(b))  
+  
+c = 1+3j  
+print("The type of c", type(c))  
+print(" c is a complex number", isinstance(1+3j,complex))  
+
+Output:
+
+The type of a <class 'int'>
+The type of b <class 'float'>
+The type of c <class 'complex'>
+c is complex number: True
+
+Python supports three kinds of numerical data.
+
+Int: 
+Float: 
+Complex: 
+
+Sequence Type
+
+Example - 1
+
+str = "string using double quotes"  
+print(str)  
+s = '''''A multiline 
+string'''  
+print(s)  
+Output:
+
+string using double quotes
+A multiline
+
+
+Example - 2
+
+str1 = 'hello javatpoint' #string str1    
+str2 = ' how are you' #string str2    
+print (str1[0:2]) #printing first two character using slice operator    
+print (str1[4]) #printing 4th character of the string    
+print (str1*2) #printing the string twice    
+print (str1 + str2) #printing the concatenation of str1 and str2    
+Output:
+
+he
+o
+hello javatpointhello javatpoint
+hello javatpoint how are you
+
+List
+
+Lists in Python are like arrays in C, but lists can contain data of different types. The things put away in the rundown are isolated with a comma (,) and encased inside square sections [].
+
+To gain access to the list's data, we can use slice [:] operators. Like how they worked with strings, the list is handled by the concatenation operator (+) and the repetition operator (*).
+
+Look at the following example.
+
+Example:
+
+list1  = [1, "hi", "Python", 2]    
+#Checking type of given list  
+print(type(list1))  
+  
+#Printing the list1  
+print (list1)  
+  
+# List slicing  
+print (list1[3:])  
+  
+# List slicing  
+print (list1[0:2])   
+  
+# List Concatenation using + operator  
+print (list1 + list1)  
+  
+# List repetation using * operator  
+print (list1 * 3)  
+Output:
+
+[1, 'hi', 'Python', 2]
+[2]
+[1, 'hi']
+[1, 'hi', 'Python', 2, 1, 'hi', 'Python', 2]
+[1, 'hi', 'Python', 2, 1, 'hi', 'Python', 2, 1, 'hi', 'Python', 2]
+Tuple
+In many ways, a tuple is like a list. Tuples, like lists, also contain a collection of items from various data types. A parenthetical space () separates the tuple's components from one another.
+
+
+
+Because we cannot alter the size or value of the items in a tuple, it is a read-only data structure.
+
+Example:
+
+tup  = ("hi", "Python", 2)    
+# Checking type of tup  
+print (type(tup))    
+  
+#Printing the tuple  
+print (tup)  
+  
+# Tuple slicing  
+print (tup[1:])    
+print (tup[0:1])    
+  
+# Tuple concatenation using + operator  
+print (tup + tup)    
+  
+# Tuple repatation using * operator  
+print (tup * 3)     
+  
+# Adding value to tup. It will throw an error.  
+t[2] = "hi"  
+Output:
+
+<class 'tuple'>
+('hi', 'Python', 2)
+('Python', 2)
+('hi',)
+('hi', 'Python', 2, 'hi', 'Python', 2)
+('hi', 'Python', 2, 'hi', 'Python', 2, 'hi', 'Python', 2)
+
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    t[2] = "hi";
+TypeError: 'tuple' object does not support item assignment
+Dictionary
+A dictionary is a key-value pair set arranged in any order. It stores a specific value for each key, like an associative array or a hash table. Value is any Python object, while the key can hold any primitive data type.
+
+The comma (,) and the curly braces are used to separate the items in the dictionary.
+
+Look at the following example.
+
+d = {1:'Jimmy', 2:'Alex', 3:'john', 4:'mike'}     
+  
+# Printing dictionary  
+print (d)  
+  
+# Accesing value using keys  
+print("1st name is "+d[1])   
+print("2nd name is "+ d[4])    
+  
+print (d.keys())    
+print (d.values())    
+Output:
+
+1st name is Jimmy
+2nd name is mike
+{1: 'Jimmy', 2: 'Alex', 3: 'john', 4: 'mike'}
+dict_keys([1, 2, 3, 4])
+dict_values(['Jimmy', 'Alex', 'john', 'mike'])
+Boolean
+True and False are the two default values for the Boolean type. These qualities are utilized to decide the given assertion valid or misleading. The class book indicates this. False can be represented by the 0 or the letter "F," while true can be represented by any value that is not zero.
+
+Look at the following example.
+
+# Python program to check the boolean type  
+print(type(True))  
+print(type(False))  
+print(false)  
+
+Output:
+
+<class 'bool'>
+<class 'bool'>
+NameError: name 'false' is not defined
+
+
+Set
+
+
+# Creating Empty set  
+set1 = set()  
+  
+set2 = {'James', 2, 3,'Python'}  
+  
+#Printing Set value  
+print(set2)  
+  
+# Adding element to the set  
+  
+set2.add(10)  
+print(set2)  
+  
+#Removing element from the set  
+set2.remove(2)  
+print(set2) 
+ 
+Output:
+
+{3, 'Python', 'James', 2}
+{'Python', 'James', 3, 2, 10}
+{'Python', 'James', 3, 10}
+
+
+
+
+
+2. keywords
+
+import keyword  
+    
+# displaying the complete list using "kwlist()."  
+print("The set of keywords in this version is: ")  
+print( keyword.kwlist )  
+
+Output:
+
+The set of keywords in this version is : 
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+By calling help(), you can retrieve a list of currently offered keywords:
+
+
+Code
+
+help("keywords")  
+
+
+
+Code
+
+print( 4 == 4 )  
+print( 6 > 9 )  
+print( True or False )  
+print( 9 <= 28 )  
+print( 6 > 9 )  
+print( True and False )  
+
+Output:
+
+True
+False
+True
+True
+False
+False
+
+
+Code
+
+print( True == 3 )  
+print( False == 0 )  
+print( True + True + True)  
+Output:
+
+False
+True
+3
+The None Keyword
+
+
+
+Code
+
+print( None == 0 )  
+print( None == " " )  
+print( None == False )  
+A = None   
+B = None  
+print( A == B )  
+Output:
+
+False
+False
+False
+True
+
+
+Code
+
+def no_return_function():  
+    num1 = 10  
+    num2 = 20  
+    addition = num1 + num2  
+  
+number = no_return_function()  
+print( number )  
+
+Output:
+
+None
+
+Code
+
+def with_return( num ):  
+    if num % 4 == 0:  
+        return False  
+  
+number = with_return( 67 )  
+print( number )  
+
+Output:
+
+None
+
+
+The in Keyword
+
+Code
+
+
+container = "Javatpoint"  
+print( "p" in container )  
+print( "P" in container )  
+
+Output:
+
+True
+False
+
+
+The is Keyword
+
+
+Code
+
+print( True is True )  
+print( False is True )  
+print( None is not None )  
+print( (9 + 5) is (7 * 2) )  
+
+Output:
+
+True
+False
+False
+True
+True, False, and None are all the same in Python since there is just one version.
+
+Code
+
+print( [] == [] )  
+print( [] is [] )  
+print( {} == {} )  
+print( {} is {} )  
+
+Output:
+
+True
+False
+True
+False
+
+
+Code
+
+print( '' == '' )  
+print( '' is '' )  
+
+Output:
+
+True
+True
+
+
+Code
+
+def the_outer_function():  
+    var = 10  
+    def the_inner_function():  
+        nonlocal var  
+        var = 14  
+        print("The value inside the inner function: ", var)  
+    the_inner_function()  
+    print("The value inside the outer function: ", var)  
+  
+the_outer_function()  
+
+Output:
+
+
+The value inside the inner function:  14
+The value inside the outer function:  14
+
+Code
+
+def the_outer_function():  
+    var = 10  
+    def the_inner_function():  
+        var = 14  
+        print("Value inside the inner function: ", var)  
+    the_inner_function()  
+    print("Value inside the outer function: ", var)  
+  
+the_outer_function()  
+
+Output:
+
+Value inside the inner function:  14
+Value inside the outer function:  10
+
+
+
+Code
+
+# Program to show the use of keywords for, while, break, continue  
+for i in range(15):  
+    
+    print( i + 4, end = " ")  
+        
+    # breaking the loop when i = 9  
+    if i == 9:  
+        break     
+print()  
+        
+# looping from 1 to 15  
+i = 0 # initial condition  
+while i < 15:  
+        
+    # When i has value 9, loop will jump to next iteration using continue. It will not print  
+    if i == 9:  
+        i += 3  
+        continue  
+    else:  
+        # when i is not equal to 9, adding 2 and printing the value  
+        print( i + 2, end = " ")  
+            
+    i += 1  
+Output:
+
+4 5 6 7 8 9 10 11 12 13 
+2 3 4 5 6 7 8 9 10 14 15 16 
+
+Exception Handling Keywords - try, except, raise, finally, and assert
+
+Code
+
+# initializing the numbers  
+var1 = 4  
+var2 = 0  
+    
+# Exception raised in the try section  
+try:  
+    d = var1 // var2 # this will raise a "divide by zero" exception.  
+    print( d )  
+# this section will handle exception raised in try block  
+except ZeroDivisionError:  
+    print("We cannot divide by zero")  
+finally:  
+    # If exception is raised or not, this block will be executed every time  
+    print("This is inside finally block")  
+# by using assert keyword we will check if var2 is 0  
+print ("The value of var1 / var2 is : ")  
+assert var2 != 0, "Divide by 0 error"  
+print (var1 / var2)  
+
+Output:
+
+We cannot divide by zero
+This is inside finally block
+The value of var1 / var2 is : 
+---------------------------------------------------------------------------
+AssertionError                            Traceback (most recent call last)
+Input In [44], in ()
+     15 # by using assert keyword we will check if var2 is 0
+     16 print ("The value of var1 / var2 is : ")
+---> 17 assert var2 != 0, "Divide by 0 error"
+     18 print (var1 / var2)
+
+AssertionError: Divide by 0 error
+
+
+
+The return Keyword
+
+Code
+
+def func_with_return():  
+    var = 13  
+    return var  
+  
+def func_with_no_return():  
+    var = 10  
+  
+print( func_with_return() )  
+print( func_with_no_return() )  
+
+Output:
+
+13
+None
+
+The del Keyword
+
+Code
+
+var1 = var2 = 5  
+del var1  
+print( var2 )  
+print( var1 )  
+
+Output:
+
+5
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Input In [42], in ()
+      2 del var1
+      3 print( var2 )
+----> 4 print( var1 )
+
+NameError: name 'var1' is not defined
+
+Code
+
+list_ = ['A','B','C']  
+del list_[2]  
+print(list_)  
+Output:
+
+['A', 'B']
+
+
+
+3. Operators
+
+
+Arithmetic operators
+Comparison operators
+Assignment Operators
+Logical Operators
+Bitwise Operators
+Membership Operators
+Identity Operators
+Arithmetic Operators
+Arithmetic Operators
+
+Arithmetic operators 
+
+a = 32    # Initialize the value of a  
+b = 6      # Initialize the value of b  
+print('Addition of two numbers:',a+b)  
+print('Subtraction of two numbers:',a-b)  
+print('Multiplication of two numbers:',a*b)  
+print('Division of two numbers:',a/b)  
+print('Reminder of two numbers:',a%b)  
+print('Exponent of two numbers:',a**b)  
+print('Floor division of two numbers:',a//b)  
+
+Output:
+
+
+Addition of two numbers: 38
+Subtraction of two numbers: 26
+Multiplication of two numbers: 192
+Division of two numbers: 5.333333333333333
+Reminder of two numbers: 2
+Exponent of two numbers: 1073741824
+Floor division of two numbers: 5
+
+Comparison operator
+
+a = 32      # Initialize the value of a  
+b = 6       # Initialize the value of b  
+print('Two numbers are equal or not:',a==b)  
+print('Two numbers are not equal or not:',a!=b)  
+print('a is less than or equal to b:',a<=b)  
+print('a is greater than or equal to b:',a>=b)  
+print('a is greater b:',a>b)  
+print('a is less than b:',a<b)  
+
+Output:
+
+
+Two numbers are equal or not: False
+Two numbers are not equal or not: True
+a is less than or equal to b: False
+a is greater than or equal to b: True
+a is greater b: True
+a is less than b: False
+
+Assignment Operators
+
+a = 32         # Initialize the value of a  
+b = 6          # Initialize the value of b  
+print('a=b:', a==b)  
+print('a+=b:', a+b)  
+print('a-=b:', a-b)  
+print('a*=b:', a*b)  
+print('a%=b:', a%b)  
+print('a**=b:', a**b)  
+print('a//=b:', a//b)  
+
+Output:
+
+a=b: False
+a+=b: 38
+a-=b: 26
+a*=b: 192
+a%=b: 2
+a**=b: 1073741824
+a//=b: 5
+
+Bitwise Operators
+
+
+a = 5          # initialize the value of a  
+b = 6          # initialize the value of b  
+print('a&b:', a&b)  
+print('a|b:', a|b)  
+print('a^b:', a^b)  
+print('~a:', ~a)  
+print('a<<b:', a<<b)  
+print('a>>b:', a>>b)  
+
+Output:
+
+
+a&b: 4
+a|b: 7
+a^b: 3
+~a: -6
+a<>b: 0
+
+Logical Operators
+
+
+a = 5          # initialize the value of a          
+print(Is this statement true?:',a > 3 and a < 5)  
+print('Any one statement is true?:',a > 3 or a < 5)  
+print('Each statement is true then return False and vice-versa:',(not(a > 3 and a < 5)))  
+Output:
+
+
+Is this statement true?: False
+Any one statement is true?: True
+Each statement is true then return False and vice-versa: True
+
+Membership Operators
+
+
+x = ["Rose", "Lotus"]  
+print(' Is value Present?', "Rose" in x)  
+print(' Is value not Present?', "Riya" not in x)  
+
+Output:
+
+Is value Present? True
+Is value not Present? True
+
+Identity Operators
+
+
+a = ["Rose", "Lotus"]  
+b = ["Rose", "Lotus"]  
+c = a  
+print(a is c)  
+print(a is not c)  
+print(a is b)  
+print(a is not b)  
+print(a == b)  
+print(a != b)  
+
+Output:
+
+
+True
+False
+False
+True
+True
+False
+
+4. if else
+
+Example 1
+
+num = int(input("enter the number:"))         
+if num%2 == 0:      
+    print("The Given number is an even number")    
+
+Output:
+
+enter the number: 10
+The Given number is an even number 
+
+Example 2 : Program to print the largest of the three numbers.
+
+a = int (input("Enter a: "));    
+b = int (input("Enter b: "));    
+c = int (input("Enter c: "));    
+if a>b and a>c:    
+    print ("From the above three numbers given a is largest");    
+if b>a and b>c:    
+    print ("From the above three numbers given b is largest");    
+if c>a and c>b:    
+    print ("From the above three numbers given c is largest");    
+
+Output:
+
+Enter a: 100
+Enter b: 120
+Enter c: 130
+
+From the above three numbers given c is largest 
+
+The if-else statement
+
+Example 1 : Program to check whether a person is eligible to vote or not.
+
+age = int (input("Enter your age: "))    
+if age>=18:    
+    print("You are eligible to vote !!");    
+else:    
+    print("Sorry! you have to wait !!");    
+
+Output:
+
+Enter your age: 90
+You are eligible to vote !!
+
+Example 2: Program to check whether a number is even or not.
+
+num = int(input("enter the number:"))         
+if num%2 == 0:      
+    print("The Given number is an even number")    
+else:    
+    print("The Given Number is an odd number")    
+
+Output:
+
+enter the number: 10
+The Given number is even number
+
+The elif statement
+
+Example 1
+number = int(input("Enter the number?"))    
+if number==10:    
+    print("The given number is equals to 10")    
+elif number==50:  
+    print("The given number is equal to 50");    
+elif number==100:    
+    print("The given number is equal to 100");    
+else:    
+    print("The given number is not equal to 10, 50 or 100");    
+
+Output:
+
+Enter the number?15
+The given number is not equal to 10, 50 or 100
+
+Example 2
+
+marks = int(input("Enter the marks? "))    
+if marks > 85 and marks <= 100:  
+   print("Congrats ! you scored grade A ...")    
+elif marks > 60 and marks <= 85:    
+   print("You scored grade B + ...")    
+elif marks > 40 and marks <= 60:  
+   print("You scored grade B ...")    
+elif (marks > 30 and marks <= 40):    
+   print("You scored grade C ...")    
+else:    
+   print("Sorry you are fail ?")    
+
+Output:
+
+Enter the marks? 89
+Congrats ! you scored grade A ...
+
+
+5. loops
+
+The for Loop
+
+for value in sequence:  
+    { code block }  
+
+
+Code
+
+  
+numbers = [4, 2, 6, 7, 3, 5, 8, 10, 6, 1, 9, 2]  
+square = 0  
+squares = []  
+for value in numbers:  
+    square = value ** 2  
+    squares.append(square)  
+print("The list of squares is", squares)  
+
+Output:
+
+The list of squares is [16, 4, 36, 49, 9, 25, 64, 100, 36, 1, 81, 4]
+
+Using else Statement with for Loop
+
+
+Code
+  
+string = "Python Loop"  
+  
+for s in /a/??   string:  
+    if s == "o":  
+        print("If block")  
+    else:  
+        print(s)  
+Output:
+
+P
+y
+t
+h
+If block
+n
+
+L
+If block
+If block
+p
+
+Now similarly, using else with for loop.
+
+Code
+
+tuple_ = (3, 4, 6, 8, 9, 2, 3, 8, 9, 7)  
+  
+# Initiating the loop  
+for value in tuple_:  
+    if value % 2 != 0:  
+        print(value)  
+# giving an else statement  
+else:  
+    print("These are the odd numbers present in the tuple")  
+Output:
+
+3
+9
+3
+9
+7
+
+These are the odd numbers present in the tuple
+
+The range() Function
+
+Code
+
+  
+print(range(15))  
+print(list(range(15)))  
+print(list(range(4, 9)))  
+print(list(range(5, 25, 4)))  
+
+Output:
+
+range(0, 15)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+[4, 5, 6, 7, 8]
+[5, 9, 13, 17, 21]
+
+Code
+
+ 
+tuple_ = ("Python", "Loops", "Sequence", "Condition", "Range")  
+  
+for iterator in range(len(tuple_)):  
+    print(tuple_[iterator].upper())  
+
+Output:
+
+PYTHON
+LOOPS
+SEQUENCE
+CONDITION
+RANGE
+
+While Loop
+
+
+counter = 0  
+while counter < 10: # giving the condition  
+    counter = counter + 3  
+    print("Python Loops")  
+
+Output:
+
+Python Loops
+Python Loops
+Python Loops
+Python Loops
+
+Using else Statement with while Loops
+
+Code
+
+counter = 0  
+  
+while (counter < 10):      
+    counter = counter + 3  
+    print("Python Loops") # Executed untile condition is met  
+else:  
+    print("Code block inside the else statement")  
+
+Output:
+
+Python Loops
+Python Loops
+Python Loops
+Python Loops
+Code block inside the else statement
+
+Single statement while Block
+
+Code
+
+counter = 0  
+while (count < 3): print("Python Loops")  
+
+
+Continue Statement
+
+Code
+
+  
+for string in "Python Loops":  
+    if string == "o" or string == "p" or string == "t":  
+         continue  
+    print('Current Letter:', string)  
+
+Output:
+
+Current Letter: P
+Current Letter: y
+Current Letter: h
+Current Letter: n
+Current Letter:  
+Current Letter: L
+Current Letter: s
+
+Break Statement
+
+Code
+
+  
+for string in "Python Loops":  
+    if string == 'L':  
+         break  
+    print('Current Letter: ', string)  
+
+Output:
+
+Current Letter:  P
+Current Letter:  y
+Current Letter:  t
+Current Letter:  h
+Current Letter:  o
+Current Letter:  n
+Current Letter:   
+
+Pass Statement
+
+Code
+
+for a string in "Python Loops":  
+    pass  
+print( 'Last Letter:', string)   
+
+Output:
+
+Last Letter: s
+
+6.  for loops
+
+
+Code
+
+numbers = [3, 5, 23, 6, 5, 1, 2, 9, 8]  
+sum_ = 0  
+for num in numbers:    
+    sum_ = sum_ + num ** 2   
+print("The sum of squares is: ", sum_)  
+
+Output:
+
+The sum of squares is:  774
+
+The range() Function
+
+Code
+
+my_list = [3, 5, 6, 8, 4]  
+for iter_var in range( len( my_list ) ):  
+    my_list.append(my_list[iter_var] + 2)  
+print( my_list )  
+
+Output:
+
+[3, 5, 6, 8, 4, 5, 7, 8, 10, 6]
+
+Iterating by Using Index of Sequence
+
+Code
+
+numbers = [3, 5, 23, 6, 5, 1, 2, 9, 8]  
+  
+sum_ = 0  
+  
+for num in range( len(numbers) ):  
+     
+sum_ = sum_ + numbers[num] ** 2   
+  
+print("The sum of squares is: ", sum_)  
+
+Output:
+
+The sum of squares is:  774
+The len() worked in a technique that profits the complete number of things in the rundown or tuple, and the implicit capability range(), which returns the specific grouping to emphasize over, proved helpful here.
+
+Using else Statement with for Loop
+
+Code
+
+student_name_1 = 'Itika'  
+student_name_2 = 'Parker'  
+  
+records = {'Itika': 90, 'Arshia': 92, 'Peter': 46}  
+def marks( student_name ):  
+    for a_student in record: # for loop will iterate over the keys of the dictionary  
+        if a_student == student_name:  
+            return records[ a_student ]  
+            break  
+    else:  
+        return f'There is no student of name {student_name} in the records'   
+          
+print( f"Marks of {student_name_1} are: ", marks( student_name_1 ) )  
+print( f"Marks of {student_name_2} are: ", marks( student_name_2 ) )  
+
+Output:
+
+Marks of Itika are:  90
+Marks of Parker are:  There is no student of name Parker in the records
+
+Nested Loops
+
+Code
+
+import random  
+numbers = [ ]  
+for val in range(0, 11):  
+    numbers.append( random.randint( 0, 11 ) )  
+for num in range( 0, 11 ):  
+    for i in numbers:  
+        if num == i:  
+            print( num, end = " " )  
+Output:
+
+0 2 4 5 6 7 8 8 9 10
+
+
+7. while loops
+
+
+Example
+
+Program code 1:
+
+
+i=1  
+while i<=10:  
+    print(i, end=' ')  
+    i+=1  
+Output:
+
+1 2 3 4 5 6 7 8 9 10 
+
+Program Code 2:
+
+
+i=1  
+while i<51:  
+    if i%5 == 0 or i%7==0 :  
+        print(i, end=' ')  
+    i+=1  
+
+Output:
+
+5 7 10 14 15 20 21 25 28 30 35 40 42 45 49 50
+
+Program Code:
+
+
+num = 15  
+  
+summation = 0  
+c = 1  
+  
+while c <= num: # specifying the condition of the loop  
+    summation = c**2 + summation  
+    c = c + 1    # incrementing the counter  
+  
+print("The sum of squares is", summation)  
+
+Output:
+
+The sum of squares is 1240
+
+
+Exercises of Python While Loop
+
+
+Program Code:
+
+
+num = [34, 12, 54, 23, 75, 34, 11]    
+  
+def prime_number(number):  
+    condition = 0  
+    iteration = 2  
+    while iteration <= number / 2:  
+        if number % iteration == 0:  
+            condition = 1  
+            break  
+        iteration = iteration + 1  
+  
+    if condition == 0:  
+        print(f"{number} is a PRIME number")  
+    else:  
+        print(f"{number} is not a PRIME number")  
+for i in num:  
+    prime_number(i)  
+
+Output:
+
+34 is not a PRIME number
+12 is not a PRIME number
+54 is not a PRIME number
+23 is a PRIME number
+75 is not a PRIME number
+34 is not a PRIME number
+11 is a PRIME number
+
+2. Armstrong and Python While Loop
+
+Program Code:
+
+
+n = int(input())  
+n1=str(n)  
+l=len(n1)  
+temp=n  
+s=0  
+while n!=0:  
+    r=n%10  
+    s=s+(r**1)  
+    n=n//10  
+if s==temp:  
+    print("It is an Armstrong number")  
+else:  
+    print("It is not an Armstrong number ")  
+
+Output:
+
+342
+It is not an Armstrong number
+
+Program Code:
+
+num = 21        
+counter = 1      
+print("The Multiplication Table of: ", num)      
+while counter <= 10: # specifying the condition  
+    ans = num * counter      
+    print (num, 'x', counter, '=', ans)      
+    counter += 1 # expression to increment the counter  
+Output:
+
+
+The Multiplication Table of:  21
+
+21 x 1 = 21
+21 x 2 = 42
+21 x 3 = 63
+21 x 4 = 84
+21 x 5 = 105
+21 x 6 = 126
+21 x 7 = 147
+21 x 8 = 168
+21 x 9 = 189
+21 x 10 = 210
+
+Python While Loop with List
+
+Program Code 1:
+
+
+list_ = [3, 5, 1, 4, 6]    
+squares = []    
+while list_: # until list is not empty this expression will give boolean True after that False    
+    squares.append( (list_.pop())**2)    
+print( squares )    
+
+Output:
+
+[36, 16, 1, 25, 9]
+
+Program Code 2:
+
+list_ = [3, 4, 8, 10, 34, 45, 67,80]        # Initialize the list  
+index = 0  
+while index < len(list_):  
+    element = list_[index]  
+    if element % 2 == 0:  
+        print('It is an even number')       # Print if the number is even.  
+    else:  
+        print('It is an odd number')        # Print if the number is odd.  
+    index += 1  
+
+Output:
+
+It is an odd number
+It is an even number
+It is an even number
+It is an even number
+It is an even number
+It is an odd number
+It is an odd number
+It is an even number
+
+Program Code 3:
+
+
+List_= ['Priya', 'Neha', 'Cow', 'To']  
+index = 0  
+while index < len(List_):  
+    element = List_[index]  
+    print(len(element))  
+    index += 1  
+Output:
+
+
+5
+4
+3
+2
+
+Python While Loop Multiple Conditions
+
+Program Code:
+
+
+num1 = 17  
+num2 = -12  
+   
+while num1 > 5 and num2 < -5 : # multiple conditions in a single while loop  
+    num1 -= 2  
+    num2 += 3  
+    print( (num1, num2) )  
+Output:
+
+
+(15, -9)
+(13, -6)
+(11, -3)
+
+
+Code
+
+num1 = 17  
+num2 = -12  
+   
+while num1 > 5 or num2 < -5 :  
+    num1 -= 2  
+    num2 += 3  
+    print( (num1, num2) )  
+Output:
+
+(15, -9)
+(13, -6)
+(11, -3)
+(9, 0)
+(7, 3)
+(5, 6)
+
+Code
+
+num1 = 9   
+num = 14   
+maximum_value = 4  
+counter = 0   
+while (counter < num1 or counter < num2) and not counter >= maximum_value: # grouping multiple conditions  
+    print(f"Number of iterations: {counter}")   
+    counter += 1  
+Output:
+
+
+Number of iterations: 0
+Number of iterations: 1
+Number of iterations: 2
+Number of iterations: 3
+
+Single Statement While Loop
+
+counter = 1  
+while counter: print('Python While Loops')  
+
+
+Continue Statement
+
+It returns the control of the Python interpreter to the beginning of the loop.
+
+Code
+
+# Python program to show how to use continue loop control  
+# Initiating the loop  
+for string in "While Loops":  
+    if string == "o" or string == "i" or string == "e":  
+         continue  
+    print('Current Letter:', string)  
+ 
+Output:
+
+Current Letter: W
+Current Letter: h
+Current Letter: l
+Current Letter:  
+Current Letter: L
+Current Letter: p
+Current Letter: s
+Break Statement
+It stops the execution of the loop when the break statement is reached.
+
+Code
+
+for string in "Python Loops":  
+    if string == 'n':  
+         break  
+    print('Current Letter: ', string)  
+
+Output:
+
+
+Current Letter:  P
+Current Letter:  y
+Current Letter:  t
+Current Letter:  h
+Current Letter:  o
+
+Pass Statement
+Pass statements are used to create empty loops. Pass statement is also employed for classes, functions, and empty control statements.
+
+Code
+
+for a string in "Python Loops":    
+    pass    
+print( 'The Last Letter of given string is:', string)     
+
+
+Output:
+The Last Letter of given string is: s
+
+8. break. 
+
+
+
+Example 1 : break statement with for loop
+
+# break statement example  
+my_list = [1, 2, 3, 4]  
+count = 1  
+for item in my_list:  
+    if item == 4:  
+        print("Item matched")  
+        count += 1  
+        break  
+print("Found at location", count)  
+
+Output:
+
+Item matched
+Found at location 2
+
+
+Example 2 : Breaking out of a loop early
+
+my_str = "python"  
+for char in my_str:  
+    if char == 'o':  
+        break  
+    print(char)    
+Output:
+
+p
+y
+t
+h
+
+Example 3: break statement with while loop
+
+# break statement example  
+i = 0;    
+while 1:    
+    print(i," ",end=""),    
+    i=i+1;    
+    if i == 10:    
+        break;    
+print("came out of while loop");    
+
+Output:
+
+0  1  2  3  4  5  6  7  8  9  came out of while loop
+
+
+Example 4 : break statement with nested loops
+
+n = 2  
+while True:  
+    i = 1  
+    while i <= 10:  
+        print("%d X %d = %d\n" % (n, i, n * i))  
+        i += 1  
+    choice = int(input("Do you want to continue printing the table? Press 0 for no: "))  
+    if choice == 0:  
+        print("Exiting the program...")  
+        break  
+    n += 1  
+print("Program finished successfully.")  
+
+Output:
+
+2 X 1 = 2
+2 X 2 = 4
+2 X 3 = 6
+2 X 4 = 8
+2 X 5 = 10
+2 X 6 = 12
+2 X 7 = 14
+2 X 8 = 16
+2 X 9 = 18
+2 X 10 = 20
+Do you want to continue printing the table? Press 0 for no: 1
+3 X 1 = 3
+3 X 2 = 6
+3 X 3 = 9
+3 X 4 = 12
+3 X 5 = 15
+3 X 6 = 18
+3 X 7 = 21
+3 X 8 = 24
+3 X 9 = 27
+3 X 10 = 30
+Do you want to continue printing the table? Press 0 for no: 0
+Exiting the program...
+Program finished successfully.
+
+
+9 Strings
+
+Creating String in Python
+
+#Using single quotes  
+str1 = 'Hello Python'  
+print(str1)  
+
+#Using double quotes  
+str2 = "Hello Python"  
+print(str2)  
+  
+#Using triple quotes  
+str3 = '''''Triple quotes are generally used for  
+    represent the multiline or 
+    docstring'''   
+print(str3)  
+
+Output:
+
+Hello Python
+Hello Python
+Triple quotes are generally used for 
+    represent the multiline or
+    docstring
+
+Strings indexing and splitting
+
+
+str = "HELLO"  
+print(str[0])  
+print(str[1])  
+print(str[2])  
+print(str[3])  
+print(str[4])  
+# It returns the IndexError because 6th index doesn't exist  
+print(str[6])  
+
+Output:
+
+H
+E
+L
+L
+O
+IndexError: string index out of range
+
+str = "JAVATPOINT"  
+# Start Oth index to end  
+print(str[0:])  
+# Starts 1th index to 4th index  
+print(str[1:5])  
+# Starts 2nd index to 3rd index  
+print(str[2:4])  
+# Starts 0th to 2nd index  
+print(str[:3])  
+#Starts 4th to 6th index  
+print(str[4:7])  
+Output:
+
+JAVATPOINT
+AVAT
+VA
+JAV
+TPO
+
+str = 'JAVATPOINT'  
+print(str[-1])  
+print(str[-3])  
+print(str[-2:])  
+print(str[-4:-1])  
+print(str[-7:-2])  
+# Reversing the given string  
+print(str[::-1])  
+print(str[-12])  
+Output:
+
+T
+I
+NT
+OIN
+ATPOI
+TNIOPTAVAJ
+IndexError: string index out of range
+
+Reassigning Strings
+
+Example 1
+
+str = "HELLO"    
+str[0] = "h"    
+print(str)    
+
+Output:
+
+Traceback (most recent call last):
+  File "12.py", line 2, in <module>
+    str[0] = "h";
+
+TypeError: 'str' object does not support item assignment
+
+Example 2
+
+str = "HELLO"    
+print(str)    
+str = "hello"    
+print(str)    
+
+Output:
+
+HELLO
+hello  
+
+Deleting the String
+
+
+str = "JAVATPOINT"  
+del str[1]  
+
+Output:
+
+TypeError: 'str' object doesn't support item deletion
+
+
+str1 = "JAVATPOINT"  
+del str1  
+print(str1)  
+
+Output:
+
+NameError: name 'str1' is not defined
+
+String Operators
+
+Operator	Description
+
++	It is known as concatenation operator used to join the strings given either side of the operator.
+*	It is known as repetition operator. It concatenates the multiple copies of the same string.
+[]	It is known as slice operator. It is used to access the sub-strings of a particular string.
+[:]	It is known as range slice operator. It is used to access the characters from the specified range.
+in	It is known as membership operator. It returns if a particular sub-string is present in the specified string.
+not in	It is also a membership operator and does the exact reverse of in. It returns true if a particular substring is not present in the specified string.
+r/R	It is used to specify the raw string. Raw strings are used in the cases where we need to print the actual meaning of escape characters such as "C://python". To define any string as a raw string, the character r or R is followed by the string.
+%	It is used to perform string formatting. It makes use of the format specifiers used in C programming like %d or %f to map their values in python. We will discuss how formatting is done in python.
+
+Example
+
+Consider the following example to understand the real use of Python operators.
+
+str = "Hello"     
+str1 = " world"    
+print(str*3) # prints HelloHelloHello    
+print(str+str1)# prints Hello world     
+print(str[4]) # prints o                
+print(str[2:4]); # prints ll                    
+print('w' in str) # prints false as w is not present in str    
+print('wo' not in str1) # prints false as wo is present in str1.     
+print(r'C://python37') # prints C://python37 as it is written    
+print("The string str : %s"%(str)) # prints The string str : Hello     
+
+Output:
+
+HelloHelloHello
+Hello world
+o
+ll
+False
+False
+C://python37
+The string str : Hello
+Python String Formatting
+
+Escape Sequence
+
+
+Example
+Consider the following example to understand the real use of Python operators.
+
+str = "They said, "Hello what's going on?""  
+print(str)  
+
+Output:
+
+SyntaxError: invalid syntax
+
+We can use the triple quotes to accomplish this problem but Python provides the escape sequence.
+
+The backslash(/) symbol denotes the escape sequence. The backslash can be followed by a special character and it interpreted differently. The single quotes inside the string must be escaped. We can apply the same as in the double quotes.
+
+
+
+
+
+Example -
+
+print('''''They said, "What's there?"''')  
+print('They said, "What\'s going on?"')  
+print("They said, \"What's going on?\"")  
+
+Output:
+
+They said, "What's there?"
+They said, "What's going on?"
+They said, "What's going on?"
+
+Here is the simple example of escape sequence.
+
+The format() method
+
+print("{} and {} both are the best friend".format("Devansh","Abhishek"))  
+print("{1} and {0} best players ".format("Virat","Rohit"))  
+print("{a},{b},{c}".format(a = "James", b = "Peter", c = "Ricky"))  
+
+Output:
+
+Devansh and Abhishek both are the best friend
+Rohit and Virat best players 
+James,Peter,Ricky 
+
+Python String Formatting Using % Operator
+
+Consider the following example.
+
+Integer = 10;    
+Float = 1.290    
+String = "Devansh"    
+print("Hi I am Integer ... My value is %d\nHi I am float ... My value is %f\nHi I am string ... My value is %s"%(Integer,Float,String))    
+Output:
+
+Hi I am Integer ... My value is 10
+Hi I am float ... My value is 1.290000
+Hi I am string ... My value is Devansh
+
+
+10 Lists
+
+List Declaration
+
+Code
+
+
+list1 = [1, 2, "Python", "Program", 15.9]      
+list2 = ["Amy", "Ryan", "Henry", "Emma"]   
+  
+print(list1)  
+print(list2)  
+  
+print(type(list1))  
+print(type(list2))  
+
+Output:
+
+[1, 2, 'Python', 'Program', 15.9]
+['Amy', 'Ryan', 'Henry', 'Emma']
+< class ' list ' >
+< class ' list ' >
+
+Characteristics of Lists
+
+The lists are in order.
+The list element can be accessed via the index.
+The mutable type of List is
+The rundowns are changeable sorts.
+The number of various elements can be stored in a list.
+
+Ordered List Checking
+
+Code
+
+a = [ 1, 2, "Ram", 3.50, "Rahul", 5, 6 ]    
+b = [ 1, 2, 5, "Ram", 3.50, "Rahul", 6 ]    
+a == b    
+Output:
+
+False
+The indistinguishable components were remembered for the two records; however, the subsequent rundown changed the file position of the fifth component, which is against the rundowns' planned request. False is returned when the two lists are compared.
+
+Code
+
+
+a = [ 1, 2, "Ram", 3.50, "Rahul", 5, 6]    
+b = [ 1, 2, "Ram", 3.50, "Rahul", 5, 6]    
+a == b    
+Output:
+
+True
+Records forever protect the component's structure. Because of this, it is an arranged collection of things.
+
+Code
+
+emp = [ "John", 102, "USA"]       
+Dep1 = [ "CS",10]    
+Dep2 = [ "IT",11]      
+HOD_CS = [ 10,"Mr. Holding"]      
+HOD_IT = [11, "Mr. Bewon"]      
+print("printing employee data ...")      
+print(" Name : %s, ID: %d, Country: %s" %(emp[0], emp[1], emp[2]))      
+print("printing departments ...")     
+print("Department 1:\nName: %s, ID: %d\n Department 2:\n Name: %s, ID: %s"%( Dep1[0], Dep2[1], Dep2[0], Dep2[1]))      
+print("HOD Details ....")      
+print("CS HOD Name: %s, Id: %d" %(HOD_CS[1], HOD_CS[0]))      
+print("IT HOD Name: %s, Id: %d" %(HOD_IT[1], HOD_IT[0]))      
+print(type(emp), type(Dep1), type(Dep2), type(HOD_CS), type(HOD_IT))    
+Output:
+
+printing employee data...
+Name : John, ID: 102, Country: USA
+printing departments...
+Department 1:
+Name: CS, ID: 11
+Department 2:
+Name: IT, ID: 11
+HOD Details ....
+CS HOD Name: Mr. Holding, Id: 10
+IT HOD Name: Mr. Bewon, Id: 11
+<class ' list '> <class ' list '> <class ' list '> <class ' list '> <class ' list '>
+
+
+List Indexing and Splitting
+
+Code
+
+list = [1,2,3,4,5,6,7]    
+print(list[0])    
+print(list[1])    
+print(list[2])    
+print(list[3])    
+print(list[0:6])    
+print(list[:])    
+print(list[2:5])    
+print(list[1:6:2])    
+
+Output:
+
+1
+2
+3
+4
+[1, 2, 3, 4, 5, 6]
+[1, 2, 3, 4, 5, 6, 7]
+[3, 4, 5]
+[2, 4, 6]
+
+
+Code
+
+# negative indexing example  
+list = [1,2,3,4,5]    
+print(list[-1])    
+print(list[-3:])    
+print(list[:-1])    
+print(list[-3:-1])    
+Output:
+
+5
+[3, 4, 5]
+[1, 2, 3, 4]
+[3, 4]
+
+Updating List Values
+
+Consider the following example to update the values inside the List.
+
+Code
+
+# updating list values  
+list = [1, 2, 3, 4, 5, 6]       
+print(list)       
+# It will assign value to the value to the second index     
+list[2] = 10     
+print(list)      
+# Adding multiple-element     
+list[1:3] = [89, 78]       
+print(list)     
+# It will add value at the end of the list    
+list[-1] = 25    
+print(list)    
+
+Output:
+
+[1, 2, 3, 4, 5, 6]
+[1, 2, 10, 4, 5, 6]
+[1, 89, 78, 4, 5, 6]
+[1, 89, 78, 4, 5, 25]
+
+Consider the following example to delete the list elements.
+
+Code
+
+list = [1, 2, 3, 4, 5, 6]       
+print(list)       
+list[2] = 10     
+print(list)      
+list[1:3] = [89, 78]       
+print(list)     
+list[-1] = 25    
+print(list)    
+
+Output:
+
+[1, 2, 3, 4, 5, 6]
+[1, 2, 10, 4, 5, 6]
+[1, 89, 78, 4, 5, 6]
+[1, 89, 78, 4, 5, 25]
+
+Python List Operations
+
+Repetition
+Concatenation
+Length
+Iteration
+Membership
+
+
+1. Repetition
+
+The redundancy administrator empowers the rundown components to be rehashed on different occasions.
+
+Code
+
+list1 = [12, 14, 16, 18, 20]  
+l = list1 * 2  
+print(l)  
+
+Output:
+
+[12, 14, 16, 18, 20, 12, 14, 16, 18, 20]
+
+2. Concatenation
+
+Code
+
+list1 = [12, 14, 16, 18, 20]  
+list2 = [9, 10, 32, 54, 86]  
+l = list1 + list2  
+print(l)  
+
+Output:
+
+[12, 14, 16, 18, 20, 9, 10, 32, 54, 86]
+
+3. Length
+
+Code
+
+list1 = [12, 14, 16, 18, 20, 23, 27, 39, 40]  
+len(list1)  
+
+Output:
+
+9
+
+4. Iteration
+
+Code
+
+list1 = [12, 14, 16, 39, 40]  
+for i in list1:   
+    print(i)  
+
+Output:
+
+12
+14
+16
+39
+40
+
+5. Membership
+
+Code
+
+list1 = [100, 200, 300, 400, 500]  
+  
+print(600 in list1)  
+print(700 in list1)  
+print(1040 in list1)  
+print(300 in list1)  
+print(100 in list1)  
+print(500 in list1)  
+
+Output:
+
+False
+False
+False
+True
+True
+True
+
+Iterating a List
+
+list = ["John", "David", "James", "Jonathan"]      
+
+for i in list:     
+    print(i)  
+
+Output:
+
+John
+David
+James
+Jonathan
+
+Adding Elements to the List
+
+Code
+
+l =[]    
+n = int(input("Enter the number of elements in the list:"))    
+for i in range(0,n):       
+    l.append(input("Enter the item:"))       
+print("printing the list items..")     
+for i in l:     
+    print(i, end = "  ")   
+
+Output:
+
+Enter the number of elements in the list:10
+Enter the item:32
+Enter the item:56
+Enter the item:81
+Enter the item:2
+Enter the item:34
+Enter the item:65
+Enter the item:09
+Enter the item:66
+Enter the item:12
+Enter the item:18
+printing the list items..
+32  56  81  2  34  65  09  66  12  18 
+
+
+Removing Elements from the List
+
+Code
+
+list = [0,1,2,3,4]       
+print("printing original list: ");      
+for i in list:      
+    print(i,end=" ")      
+list.remove(2)      
+print("\nprinting the list after the removal of first element...")      
+for i in list:      
+    print(i,end=" ")    
+
+Output:
+
+printing original list: 
+0 1 2 3 4 
+printing the list after the removal of first element...
+0 1 3 4 
+
+Python List Built-in Functions
+
+len()
+max()
+min()
+len( )
+It is used to calculate the length of the list.
+
+Code
+
+list1 = [12, 16, 18, 20, 39, 40]  
+len(list1)  
+
+Output:
+
+6
+
+Max( )
+
+Code
+
+list1 = [103, 675, 321, 782, 200]  
+print(max(list1))  
+
+Output:
+
+782
+
+Min( )
+
+Code
+
+list1 = [103, 675, 321, 782, 200]  
+print(min(list1))  
+
+Output:
+
+103
+
+Example: 1- Create a program to eliminate the List's duplicate items.
+
+Code
+
+list1 = [1,2,2,3,55,98,65,65,13,29]    
+
+list2 = []    
+for i in list1:    
+    if i not in list2:    
+        list2.append(i)    
+print(list2)    
+
+Output:
+
+[1, 2, 3, 55, 98, 65, 13, 29]
+
+Example:2- Compose a program to track down the amount of the component in the rundown.
+
+Code
+
+list1 = [3,4,5,9,10,12,24]    
+sum = 0    
+for i in list1:    
+    sum = sum+i        
+print("The sum is:",sum)  
+
+Output:
+
+The sum is: 67
+In [8]:
+
+Example: 3- Compose the program to find the rundowns comprise of somewhere around one normal component.
+
+Code
+
+list1 = [1,2,3,4,5,6]    
+list2 = [7,8,9,2,10]    
+for x in list1:    
+    for y in list2:    
+        if x == y:    
+            print("The common element is:",x)    
+Output:
+
+The common element is: 2
+
+
+11  tuples
+
+Code
+
+empty_tuple = ()    
+print("Empty tuple: ", empty_tuple)    
+    
+int_tuple = (4, 6, 8, 10, 12, 14)    
+print("Tuple with integers: ", int_tuple)    
+    
+mixed_tuple = (4, "Python", 9.3)    
+print("Tuple with different data types: ", mixed_tuple)    
+    
+nested_tuple = ("Python", {4: 5, 6: 2, 8:2}, (5, 3, 5, 6))    
+print("A nested tuple: ", nested_tuple)    
+
+Output:
+
+Empty tuple:  ()
+Tuple with integers:  (4, 6, 8, 10, 12, 14)
+Tuple with different data types:  (4, 'Python', 9.3)
+A nested tuple:  ('Python', {4: 5, 6: 2, 8: 2}, (5, 3, 5, 6))
+Parentheses are not necessary for the construction of multiples. This is known as triple pressing.
+
+Code
+
+tuple_ = 4, 5.7, "Tuples", ["Python", "Tuples"]    
+print(tuple_)    
+print(type(tuple_) )    
+
+try:    
+    tuple_[1] = 4.2    
+except:    
+    print(TypeError )    
+Output:
+
+(4, 5.7, 'Tuples', ['Python', 'Tuples'])
+<class 'tuple'>
+<class 'TypeError'>
+
+The development of a tuple from a solitary part may be complex.
+Essentially adding a bracket around the component is lacking. A comma must separate the element to be recognized as a tuple.
+
+Code
+
+single_tuple = ("Tuple")    
+print( type(single_tuple) )     
+single_tuple = ("Tuple",)    
+print( type(single_tuple) )     
+single_tuple = "Tuple",    
+print( type(single_tuple) )    
+
+Output:
+
+<class 'str'>
+<class 'tuple'>
+<class 'tuple'>
+
+Accessing Tuple Elements
+
+Indexing
+
+
+tuple_ = ("Python", "Tuple", "Ordered", "Collection")    
+print(tuple_[0])      
+print(tuple_[1])     
+
+try:    
+    print(tuple_[5])     
+except Exception as e:    
+    print(e)    
+
+try:    
+    print(tuple_[1.0])     
+except Exception as e:    
+    print(e)    
+nested_tuple = ("Tuple", [4, 6, 2, 6], (6, 2, 6, 7))    
+    
+print(nested_tuple[0][3])           
+print(nested_tuple[1][1])       
+
+Output:
+
+Python
+Tuple
+tuple index out of range
+tuple indices must be integers or slices, not float
+l
+6
+
+Negative Indexing
+
+Code
+
+tuple_ = ("Python", "Tuple", "Ordered", "Collection")    
+print("Element at -1 index: ", tuple_[-1])    
+print("Elements between -4 and -1 are: ", tuple_[-4:-1])    
+
+Output:
+
+Element at -1 index:  Collection
+Elements between -4 and -1 are:  ('Python', 'Tuple', 'Ordered')
+Slicing
+Tuple slicing is a common practice in Python and the most common way for programmers to deal with practical issues. Look at a tuple in Python. Slice a tuple to access a variety of its elements. Using the colon as a straightforward slicing operator (:) is one strategy.
+
+To gain access to various tuple elements, we can use the slicing operator colon (:).
+
+Code
+
+tuple_ = ("Python", "Tuple", "Ordered", "Immutable", "Collection", "Objects")    
+print("Elements between indices 1 and 3: ", tuple_[1:3])    
+print("Elements between indices 0 and -4: ", tuple_[:-4])    
+print("Entire tuple: ", tuple_[:])    
+
+Output:
+
+Elements between indices 1 and 3:  ('Tuple', 'Ordered')
+Elements between indices 0 and -4:  ('Python', 'Tuple')
+Entire tuple:  ('Python', 'Tuple', 'Ordered', 'Immutable', 'Collection', 'Objects')
+
+Deleting a Tuple
+
+Code
+
+tuple_ = ("Python", "Tuple", "Ordered", "Immutable", "Collection", "Objects")    
+try:     
+    del tuple_[3]    
+    print(tuple_)    
+except Exception as e:    
+    print(e)    
+del tuple_    
+try:    
+    print(tuple_)    
+except Exception as e:    
+    print(e)    
+
+Output:
+
+'tuple' object does not support item deletion
+name 'tuple_' is not defined
+
+Repetition Tuples in Python
+
+tuple_ = ('Python',"Tuples")    
+print("Original tuple is: ", tuple_)    
+tuple_ = tuple_ * 3    
+print("New tuple is: ", tuple_)    
+
+Output:
+
+Original tuple is:  ('Python', 'Tuples')
+New tuple is:  ('Python', 'Tuples', 'Python', 'Tuples', 'Python', 'Tuples')
+
+Tuple Methods
+
+Count () Method
+
+
+T1 = (0, 1, 5, 6, 7, 2, 2, 4, 2, 3, 2, 3, 1, 3, 2)  
+T2 = ('python', 'java', 'python', 'Tpoint', 'python', 'java')  
+res = T1.count(2)  
+print('Count of 2 in T1 is:', res)  
+res = T2.count('java')  
+print('Count of Java in T2 is:', res)  
+
+Output:
+
+Count of 2 in T1 is: 5
+Count of java in T2 is: 2
+
+Index() Method:
+
+Code
+
+Tuple_data = (0, 1, 2, 3, 2, 3, 1, 3, 2)  
+res = Tuple_data.index(3)  
+print('First occurrence of 1 is', res)  
+res = Tuple_data.index(3, 4)  
+print('First occurrence of 1 after 4th index is:', res)  
+
+Output:
+
+First occurrence of 1 is 2
+First occurrence of 1 after 4th index is: 6
+
+Tuple Membership Test
+
+
+tuple_ = ("Python", "Tuple", "Ordered", "Immutable", "Collection", "Ordered")    
+print('Tuple' in tuple_)    
+print('Items' in tuple_)    
+print('Immutable' not in tuple_)    
+print('Items' not in tuple_)    
+
+Output:
+
+True
+False
+False
+True
+
+Iterating Through a Tuple
+
+tuple_ = ("Python", "Tuple", "Ordered", "Immutable")    
+
+for item in tuple_:    
+    print(item)    
+
+Output:
+
+Python
+Tuple
+Ordered
+Immutable
+
+Changing a Tuple
+
+Code
+
+tuple_ = ("Python", "Tuple", "Ordered", "Immutable", [1,2,3,4])    
+try:    
+    tuple_[2] = "Items"    
+    print(tuple_)    
+except Exception as e:    
+    print( e )    
+tuple_[-1][2] = 10     
+print(tuple_)    
+tuple_ = ("Python", "Items")    
+print(tuple_)    
+
+Output:
+
+'tuple' object does not support item assignment
+('Python', 'Tuple', 'Ordered', 'Immutable', [1, 2, 10, 4])
+('Python', 'Items')
+
+tuple_ = ("Python", "Tuple", "Ordered", "Immutable")    
+print(tuple_ + (4, 5, 6))    
+
+Output:
+
+('Python', 'Tuple', 'Ordered', 'Immutable', 4, 5, 6)
+
+
+12 difference
+
+Differences between Lists and Tuples
+
+
+List and Tuple Syntax Differences
+
+ # Python code to show the difference between creating a list and a tuple  
+  
+list_ = [4, 5, 7, 1, 7]  
+tuple_ = (4, 1, 8, 3, 9)  
+ 
+print("List is: ", list_)  
+print("Tuple is: ", tuple_)  
+
+Output:
+
+List is:  [4, 5, 7, 1, 7]
+Tuple is:  (4, 1, 8, 3, 9)
+
+print( type(list_) )  
+print( type(tuple_) )  
+
+Output:
+
+<class 'list'>
+<class 'tuple'>
+
+Mutable List vs. Immutable Tuple
+
+Example Code
+
+  
+list_ = ["Python", "Lists", "Tuples", "Differences"]  
+tuple_ = ("Python", "Lists", "Tuples", "Differences")  
+  
+list_[3] = "Mutable"  
+print( list_ )  
+
+try:  
+    tuple_[3] = "Immutable"  
+    print( tuple_ )  
+except TypeError:  
+    print( "Tuples cannot be modified because they are immutable" )  
+Output:
+
+['Python', 'Lists', 'Tuples', 'Mutable']
+
+Size Difference
+
+list_ = ["Python", "Lists", "Tuples", "Differences"]  
+tuple_ = ("Python", "Lists", "Tuples", "Differences")  
+print("Size of tuple: ", tuple_.__sizeof__())  
+print("Size of list: ", list_.__sizeof__())  
+
+Output:
+
+Size of tuple:  28
+Size of list:  52
+
+# printing directory of list  
+dir(list_)  
+
+Output:
+
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+
+Example Code
+
+# Printing directory of a tuple  
+print( dir(tuple_), end = ", " ) 
+ 
+Output:
+
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'count', 'index']
+
+
+13 Set
+
+
+Creating a set
+
+Example 1: Using curly braces
+
+Days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}    
+print(Days)    
+print(type(Days))    
+print("looping through the set elements ... ")    
+for i in Days:    
+    print(i)    
+
+Output:
+
+{'Friday', 'Tuesday', 'Monday', 'Saturday', 'Thursday', 'Sunday', 'Wednesday'}
+<class 'set'>
+looping through the set elements ... 
+Friday
+Tuesday
+Monday
+Saturday
+Thursday
+Sunday
+Wednesday
+
+Example 2: Using set() method
+
+Days = set(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])    
+print(Days)    
+print(type(Days))    
+print("looping through the set elements ... ")    
+for i in Days:    
+    print(i)    
+
+Output:
+
+{'Friday', 'Wednesday', 'Thursday', 'Saturday', 'Monday', 'Tuesday', 'Sunday'}
+<class 'set'>
+looping through the set elements ... 
+Friday
+Wednesday
+Thursday
+Saturday
+Monday
+Tuesday
+Sunday
+
+
+# Creating a set which have immutable elements  
+set1 = {1,2,3, "JavaTpoint", 20.5, 14}  
+print(type(set1))  
+#Creating a set which have mutable element  
+set2 = {1,2,3,["Javatpoint",4]}  
+print(type(set2))  
+
+Output:
+
+<class 'set'>
+
+Traceback (most recent call last)
+<ipython-input-5-9605bb6fbc68> in <module>
+      4 
+      5 #Creating a set which holds mutable elements
+----> 6 set2 = {1,2,3,["Javatpoint",4]}
+      7 print(type(set2))
+
+TypeError: unhashable type: 'list'
+
+
+# Empty curly braces will create dictionary  
+set3 = {}  
+print(type(set3))  
+  
+# Empty set using set() function  
+set4 = set()  
+print(type(set4))  
+
+Output:
+
+<class 'dict'>
+<class 'set'>
+Let's see what happened if we provide the duplicate element to the set.
+
+set5 = {1,2,4,4,5,8,9,9,10}  
+print("Return set with unique elements:",set5)  
+
+Output:
+
+Return set with unique elements: {1, 2, 4, 5, 8, 9, 10}
+
+Adding items to the set
+
+
+Example: 1 - Using add() method
+
+Months = set(["January","February", "March", "April", "May", "June"])    
+print("\nprinting the original set ... ")    
+print(months)    
+print("\nAdding other months to the set...");    
+Months.add("July");    
+Months.add ("August");    
+print("\nPrinting the modified set...");    
+print(Months)    
+print("\nlooping through the set elements ... ")    
+for i in Months:    
+    print(i)    
+
+Output:
+
+printing the original set ... 
+{'February', 'May', 'April', 'March', 'June', 'January'}
+
+Adding other months to the set...
+
+Printing the modified set...
+{'February', 'July', 'May', 'April', 'March', 'August', 'June', 'January'}
+
+looping through the set elements ... 
+February
+July
+May
+April
+March
+August
+June
+January 
+
+Example - 2 Using update() function
+
+Months = set(["January","February", "March", "April", "May", "June"])    
+print("\nprinting the original set ... ")    
+print(Months)    
+print("\nupdating the original set ... ")    
+Months.update(["July","August","September","October"]);    
+print("\nprinting the modified set ... ")     
+print(Months);  
+
+Output:
+
+printing the original set ... 
+{'January', 'February', 'April', 'May', 'June', 'March'}
+
+updating the original set ... 
+printing the modified set ... 
+{'January', 'February', 'April', 'August', 'October', 'May', 'June', 'July', 'September', 'March'}
+
+Removing items from the set
+
+Example-1 Using discard() method
+
+months = set(["January","February", "March", "April", "May", "June"])    
+print("\nprinting the original set ... ")    
+print(months)    
+print("\nRemoving some months from the set...");    
+months.discard("January");    
+months.discard("May");    
+print("\nPrinting the modified set...");    
+print(months)    
+print("\nlooping through the set elements ... ")    
+for i in months:    
+    print(i)    
+
+Output:
+
+printing the original set ... 
+{'February', 'January', 'March', 'April', 'June', 'May'}
+
+Removing some months from the set...
+
+Printing the modified set...
+{'February', 'March', 'April', 'June'}
+
+looping through the set elements ... 
+February
+March
+April
+June
+
+Example-2 Using remove() function
+
+months = set(["January","February", "March", "April", "May", "June"])    
+print("\nprinting the original set ... ")    
+print(months)    
+print("\nRemoving some months from the set...");    
+months.remove("January");    
+months.remove("May");    
+print("\nPrinting the modified set...");    
+print(months)    
+
+Output:
+
+printing the original set ... 
+{'February', 'June', 'April', 'May', 'January', 'March'}
+
+Removing some months from the set...
+
+Printing the modified set...
+{'February', 'June', 'April', 'March'}
+
+
+Months = set(["January","February", "March", "April", "May", "June"])    
+print("\nprinting the original set ... ")    
+print(Months)    
+print("\nRemoving some months from the set...");    
+Months.pop();    
+Months.pop();    
+print("\nPrinting the modified set...");    
+print(Months)    
+
+Output:
+
+printing the original set ... 
+{'June', 'January', 'May', 'April', 'February', 'March'}
+
+Removing some months from the set...
+
+Printing the modified set...
+{'May', 'April', 'February', 'March'}
+
+
+Consider the following example.
+
+Months = set(["January","February", "March", "April", "May", "June"])    
+print("\nprinting the original set ... ")    
+print(Months)    
+print("\nRemoving all the items from the set...");    
+Months.clear()    
+print("\nPrinting the modified set...")    
+print(Months)    
+
+Output:
+
+printing the original set ... 
+{'January', 'May', 'June', 'April', 'March', 'February'}
+
+Removing all the items from the set...
+
+Printing the modified set...
+set()
+
+Difference between discard() and remove()
+
+
+Example-
+
+Months = set(["January","February", "March", "April", "May", "June"])    
+print("\nprinting the original set ... ")    
+print(Months)    
+print("\nRemoving items through discard() method...");    
+Months.discard("Feb"); #will not give an error although the key feb is not available in the set    
+print("\nprinting the modified set...")    
+print(Months)    
+print("\nRemoving items through remove() method...");    
+Months.remove("Jan") #will give an error as the key jan is not available in the set.     
+print("\nPrinting the modified set...")    
+print(Months)    
+
+Output:
+
+printing the original set ... 
+{'March', 'January', 'April', 'June', 'February', 'May'}
+
+Removing items through discard() method...
+
+printing the modified set...
+{'March', 'January', 'April', 'June', 'February', 'May'}
+
+Removing items through remove() method...
+Traceback (most recent call last):
+  File "set.py", line 9, in 
+    Months.remove("Jan")
+KeyError: 'Jan'
+
+
+Union of two Sets
+
+Example 1: using union | operator
+
+Days1 = {"Monday","Tuesday","Wednesday","Thursday", "Sunday"}    
+Days2 = {"Friday","Saturday","Sunday"}    
+print(Days1|Days2) #printing the union of the sets     
+Output:
+
+{'Friday', 'Sunday', 'Saturday', 'Tuesday', 'Wednesday', 'Monday', 'Thursday'}
+Python also provides the union() method which can also be used to calculate the union of two sets. Consider the following example.
+
+Example 2: using union() method
+
+Days1 = {"Monday","Tuesday","Wednesday","Thursday"}    
+Days2 = {"Friday","Saturday","Sunday"}    
+print(Days1.union(Days2)) #printing the union of the sets     
+
+Output:
+
+{'Friday', 'Monday', 'Tuesday', 'Thursday', 'Wednesday', 'Sunday', 'Saturday'}
+Now, we can also make the union of more than two sets using the union() function, for example:
+
+Program:
+
+# Create three sets  
+set1 = {1, 2, 3}  
+set2 = {2, 3, 4}  
+set3 = {3, 4, 5}  
+  
+# Find the common elements between the three sets  
+common_elements = set1.union(set2, set3)  
+  
+# Print the common elements  
+print(common_elements)  
+
+Output:
+
+{1, 2, 3, 4, 5}
+
+The intersection of two sets
+
+Example 1: Using & operator
+
+Days1 = {"Monday","Tuesday", "Wednesday", "Thursday"}    
+Days2 = {"Monday","Tuesday","Sunday", "Friday"}    
+print(Days1&Days2) #prints the intersection of the two sets    
+
+Output:
+
+{'Monday', 'Tuesday'}
+
+Example 2: Using intersection() method
+
+set1 = {"Devansh","John", "David", "Martin"}    
+set2 = {"Steve", "Milan", "David", "Martin"}    
+print(set1.intersection(set2)) #prints the intersection of the two sets    
+
+Output:
+
+{'Martin', 'David'}
+
+Example 3:
+
+set1 = {1,2,3,4,5,6,7}  
+set2 = {1,2,20,32,5,9}  
+set3 = set1.intersection(set2)  
+print(set3)  
+
+Output:
+
+{1,2,5}
+
+For Example:
+
+# Create three sets  
+set1 = {1, 2, 3}  
+set2 = {2, 3, 4}  
+set3 = {3, 4, 5}  
+  
+# Find the common elements between the three sets  
+common_elements = set1.intersection(set2, set3)  
+  
+# Print the common elements  
+print(common_elements)  
+
+Output:
+
+{3}
+
+The intersection_update() method
+
+Consider the following example.
+
+a = {"Devansh", "bob", "castle"}    
+b = {"castle", "dude", "emyway"}    
+c = {"fuson", "gaurav", "castle"}    
+a.intersection_update(b, c)    
+print(a)    
+
+Output:
+
+{'castle'}
+
+Difference between the two sets
+
+Example 1 : Using subtraction ( - ) operator
+
+Days1 = {"Monday",  "Tuesday", "Wednesday", "Thursday"}    
+Days2 = {"Monday", "Tuesday", "Sunday"}    
+print(Days1-Days2) #{"Wednesday", "Thursday" will be printed}    
+
+Output:
+{'Thursday', 'Wednesday'}
+
+Example 2 : Using difference() method
+
+Days1 = {"Monday",  "Tuesday", "Wednesday", "Thursday"}    
+Days2 = {"Monday", "Tuesday", "Sunday"}    
+print(Days1.difference(Days2)) # prints the difference of the two sets Days1 and Days2    
+
+Output:
+
+{'Thursday', 'Wednesday'}
+
+Symmetric Difference of two sets
+
+Example - 1: Using ^ operator
+
+a = {1,2,3,4,5,6}  
+b = {1,2,9,8,10}  
+c = a^b  
+print(c)  
+
+Output:
+
+{3, 4, 5, 6, 8, 9, 10}
+Example - 2: Using symmetric_difference() method
+
+a = {1,2,3,4,5,6}  
+b = {1,2,9,8,10}  
+c = a.symmetric_difference(b)  
+print(c)  
+
+Output:
+
+{3, 4, 5, 6, 8, 9, 10}
+
+Set comparisons
+
+==: checks if two sets have the same elements, regardless of their order.
+!=: checks if two sets are not equal.
+<: checks if the left set is a proper subset of the right set (i.e., all elements in the left set are also in the right set, but the right set has additional elements).
+<=: checks if the left set is a subset of the right set (i.e., all elements in the left set are also in the right set).
+>: checks if the left set is a proper superset of the right set (i.e., all elements in the right set are also in the left set, but the left set has additional elements).
+>=: checks if the left set is a superset of the right set (i.e., all elements in the right set are also in the left).
+Consider the following example.
+
+Days1 = {"Monday",  "Tuesday", "Wednesday", "Thursday"}    
+Days2 = {"Monday", "Tuesday"}    
+Days3 = {"Monday", "Tuesday", "Friday"}    
+    
+#Days1 is the superset of Days2 hence it will print true.     
+print (Days1>Days2)     
+    
+#prints false since Days1 is not the subset of Days2     
+print (Days1<Days2)    
+    
+#prints false since Days2 and Days3 are not equivalent     
+print (Days2 == Days3)    
+
+Output:
+
+True
+False
+False
+
+FrozenSets
+
+Frozenset = frozenset([1,2,3,4,5])     
+print(type(Frozenset))    
+print("\nprinting the content of frozen set...")    
+for i in Frozenset:    
+    print(i);    
+Frozenset.add(6) #gives an error since we cannot change the content of Frozenset after creation     
+
+Output:
+
+<class 'frozenset'>
+
+printing the content of frozen set...
+1
+2
+3
+4
+5
+Traceback (most recent call last):
+  File "set.py", line 6, in <module>
+    Frozenset.add(6) #gives an error since we can change the content of Frozenset after creation 
+AttributeError: 'frozenset' object has no attribute 'add'
+
+Frozenset for the dictionary
+
+Dictionary = {"Name":"John", "Country":"USA", "ID":101}     
+print(type(Dictionary))    
+Frozenset = frozenset(Dictionary); #Frozenset will contain the keys of the dictionary    
+print(type(Frozenset))    
+for i in Frozenset:     
+    print(i)    
+
+Output:
+
+<class 'dict'>
+<class 'frozenset'>
+Name
+Country
+ID
+
+Set Programming Example
+
+Example - 1: Write a program to remove the given number from the set.
+
+my_set = {1,2,3,4,5,6,12,24}  
+n = int(input("Enter the number you want to remove"))  
+my_set.discard(n)  
+print("After Removing:",my_set)  
+
+Output:
+
+Enter the number you want to remove:12
+After Removing: {1, 2, 3, 4, 5, 6, 24}
+
+Example - 2: Write a program to add multiple elements to the set.
+
+set1 = set([1,2,4,"John","CS"])  
+set1.update(["Apple","Mango","Grapes"])  
+print(set1)  
+
+Output:
+
+{1, 2, 4, 'Apple', 'John', 'CS', 'Mango', 'Grapes'}
+
+Example - 3: Write a program to find the union between two set.
+
+set1 = set(["Peter","Joseph", 65,59,96])  
+set2  = set(["Peter",1,2,"Joseph"])  
+set3 = set1.union(set2)  
+print(set3)  
+
+Output:
+
+{96, 65, 2, 'Joseph', 1, 'Peter', 59}
+
+Example- 4: Write a program to find the intersection between two sets.
+
+set1 = {23,44,56,67,90,45,"Javatpoint"}  
+set2 = {13,23,56,76,"Sachin"}  
+set3 = set1.intersection(set2)  
+print(set3)  
+
+Output:
+
+{56, 23}
+
+Example - 5: Write the program to add element to the frozenset.
+
+set1 = {23,44,56,67,90,45,"Javatpoint"}  
+set2 = {13,23,56,76,"Sachin"}  
+set3 = set1.intersection(set2)  
+print(set3)  
+
+Output:
+
+TypeError: 'frozenset' object does not support item assignment
+
+Example - 6: Write the program to find the issuperset, issubset and superset.
+
+set1 = set(["Peter","James","Camroon","Ricky","Donald"])  
+set2 = set(["Camroon","Washington","Peter"])  
+set3 = set(["Peter"])  
+  
+issubset = set1 >= set2  
+print(issubset)  
+issuperset = set1 <= set2  
+print(issuperset)  
+issubset = set3 <= set2  
+print(issubset)  
+issuperset = set2 >= set3  
+print(issuperset)  
+
+Output:
+
+False
+False
+True
+True
+
+
+14 dictionary
+
+Code
+
+Employee = {"Name": "Johnny", "Age": 32, "salary":26000,"Company":"^TCS"}        
+print(type(Employee))        
+print("printing Employee data .... ")        
+print(Employee)         
+
+Output
+
+<class 'dict'>
+printing Employee data .... 
+{'Name': 'Johnny', 'Age': 32, 'salary': 26000, 'Company': TCS}
+Python provides the built-in function dict() method which is also used to create the dictionary.
+
+
+Code
+
+Dict = {}       
+print("Empty Dictionary: ")       
+print(Dict)       
+      
+Dict = dict({1: 'Hcl', 2: 'WIPRO', 3:'Facebook'})       
+print("\nCreate Dictionary by using  dict(): ")       
+print(Dict)       
+      
+Dict = dict([(4, 'Rinku'), (2, Singh)])       
+print("\nDictionary with each item as a pair: ")       
+print(Dict)       
+
+Output
+
+Empty Dictionary: 
+{}
+
+Create Dictionary by using  dict(): 
+{1: 'Hcl', 2: 'WIPRO', 3: 'Facebook'}
+
+Dictionary with each item as a pair: 
+{4: 'Rinku', 2: 'Singh'}
+
+Accessing the dictionary values
+
+Employee = {"Name": "Dev", "Age": 20, "salary":45000,"Company":"WIPRO"}      
+print(type(Employee))      
+print("printing Employee data .... ")      
+print("Name : %s" %Employee["Name"])      
+print("Age : %d" %Employee["Age"])      
+print("Salary : %d" %Employee["salary"])      
+print("Company : %s" %Employee["Company"])       
+Output
+
+ee["Company"])    
+
+Output
+<class 'dict'>
+printing Employee data .... 
+Name : Dev
+Age : 20
+Salary : 45000
+Company : WIPRO
+
+
+Adding Dictionary Values
+
+
+Example - 1:
+
+Dict = {}       
+print("Empty Dictionary: ")       
+print(Dict)       
+        
+Dict[0] = 'Peter'      
+Dict[2] = 'Joseph'      
+Dict[3] = 'Ricky'      
+print("\nDictionary after adding 3 elements: ")       
+print(Dict)       
+        
+Dict['Emp_ages'] = 20, 33, 24      
+print("\nDictionary after adding 3 elements: ")       
+print(Dict)       
+  
+Dict[3] = 'JavaTpoint'      
+print("\nUpdated key value: ")       
+print(Dict)            
+
+Output
+
+Empty Dictionary: 
+{}
+
+Dictionary after adding 3 elements: 
+{0: 'Peter', 2: 'Joseph', 3: 'Ricky'}
+
+Dictionary after adding 3 elements: 
+{0: 'Peter', 2: 'Joseph', 3: 'Ricky', 'Emp_ages': (20, 33, 24)}
+
+Updated key value: 
+{0: 'Peter', 2: 'Joseph', 3: 'JavaTpoint', 'Emp_ages': (20, 33, 24)}
+
+Example - 2:
+
+Employee = {"Name": "Dev", "Age": 20, "salary":45000,"Company":"WIPRO"}         
+print(type(Employee))        
+print("printing Employee data .... ")        
+print(Employee)        
+print("Enter the details of the new employee....");        
+Employee["Name"] = input("Name: ");        
+Employee["Age"] = int(input("Age: "));        
+Employee["salary"] = int(input("Salary: "));        
+Employee["Company"] = input("Company:");        
+print("printing the new data");        
+print(Employee)     
+
+
+Output
+
+<class 'dict'>
+printing Employee data .... 
+Employee = {"Name": "Dev", "Age": 20, "salary":45000,"Company":"WIPRO"} Enter the details of the new employee....
+Name: Sunny
+Age: 38
+Salary: 39000
+Company:Hcl
+printing the new data
+{'Name': 'Sunny', 'Age': 38, 'salary': 39000, 'Company': 'Hcl'}
+
+Deleting Elements using del Keyword
+
+Employee = {"Name": "David", "Age": 30, "salary":55000,"Company":"WIPRO"}         
+print(type(Employee))        
+print("printing Employee data .... ")        
+print(Employee)        
+print("Deleting some of the employee data")         
+del Employee["Name"]        
+del Employee["Company"]        
+print("printing the modified information ")        
+print(Employee)        
+print("Deleting the dictionary: Employee");        
+del Employee        
+print("Lets try to print it again ");        
+print(Employee)       
+
+Output
+
+<class 'dict'>
+printing Employee data .... 
+{'Name': 'David', 'Age': 30, 'salary': 55000, 'Company': 'WIPRO'}
+Deleting some of the employee data
+printing the modified information 
+{'Age': 30, 'salary': 55000}
+Deleting the dictionary: Employee
+Lets try to print it again 
+NameError: name 'Employee' is not defined.
+
+
+Deleting Elements using pop() Method
+
+
+Dict1 = {1: 'JavaTpoint', 2: 'Educational', 3: 'Website'}       
+pop_key = Dict1.pop(2)       
+print(Dict1)      
+
+Output
+
+{1: 'JavaTpoint', 3: 'Website'}
+
+Iterating Dictionary
+
+Example 1
+
+Employee = {"Name": "John", "Age": 29, "salary":25000,"Company":"WIPRO"}        
+for x in Employee:        
+    print(x)       
+
+Output
+
+Name
+Age
+salary
+Company
+
+Example 2
+
+Employee = {"Name": "John", "Age": 29, "salary":25000,"Company":"WIPRO"} for x in Employee:        
+ print(Employee[x])       
+
+Output
+
+John
+29
+25000
+WIPRO
+
+Example - 3
+
+Employee = {"Name": "John", "Age": 29, "salary":25000,"Company":"WIPRO"}        
+for x in Employee.values():        
+    print(x)       
+
+Output
+
+John
+29
+25000
+WIPRO
+
+Example 4
+
+Employee = {"Name": "John", "Age": 29, "salary":25000,"Company":"WIPRO"}       
+for x in Employee.items():        
+    print(x)      
+
+Output
+
+('Name', 'John')
+('Age', 29)
+('salary', 25000)
+('Company', 'WIPRO')
+
+
+Code
+
+Employee={"Name":"John","Age":29,"Salary":25000,"Company":"WIPRO","Name":    
+"John"}        
+for x,y in Employee.items():        
+        print(x,y)           
+
+Output
+
+Name John
+Age 29
+Salary 25000
+Company WIPRO
+
+Code
+
+Employee = {"Name": "John", "Age": 29, "salary":26000,"Company":"WIPRO",[100,201,301]:"Department ID"}        
+for x,y in Employee.items():        
+    print(x,y)           
+
+Output
+
+Traceback (most recent call last):
+  File "dictionary.py", line 1, in 
+    Employee = {"Name": "John", "Age": 29, "salary":26000,"Company":"WIPRO",[100,201,301]:"Department ID"}
+TypeError: unhashable type: 'list'
+
+Built-in Dictionary Functions
+
+
+len()
+
+dict = {1: "Ayan", 2: "Bunny", 3: "Ram", 4: "Bheem"}  
+len(dict)  
+
+Output
+
+4
+
+any()
+
+dict = {1: "Ayan", 2: "Bunny", 3: "Ram", 4: "Bheem"}  
+any({'':'','':'','3':''})  
+
+Output
+
+True
+
+all()
+
+dict = {1: "Ayan", 2: "Bunny", 3: "Ram", 4: "Bheem"}  
+all({1:'',2:'','':''})  
+
+Output
+
+False
+
+sorted()
+
+dict = {7: "Ayan", 5: "Bunny", 8: "Ram", 1: "Bheem"}  
+sorted(dict)  
+
+Output
+
+[ 1, 5, 7, 8]
+
+
+clear()
+
+
+dict = {1: "Hcl", 2: "WIPRO", 3: "Facebook", 4: "Amazon", 5: "Flipkart"}    
+dict.clear()    
+print(dict)    
+
+Output
+
+{ }
+
+copy()
+
+dict = {1: "Hcl", 2: "WIPRO", 3: "Facebook", 4: "Amazon", 5: "Flipkart"}    
+dict_demo = dict.copy()    
+print(dict_demo)    
+
+Output
+
+{1: 'Hcl', 2: 'WIPRO', 3: 'Facebook', 4: 'Amazon', 5: 'Flipkart'}
+
+pop()
+
+dict = {1: "Hcl", 2: "WIPRO", 3: "Facebook", 4: "Amazon", 5: "Flipkart"}    
+dict_demo = dict.copy()    
+x = dict_demo.pop(1)    
+print(x)    
+
+Output
+
+{2: 'WIPRO', 3: 'Facebook', 4: 'Amazon', 5: 'Flipkart'}
+
+popitem()
+
+
+dict = {1: "Hcl", 2: "WIPRO", 3: "Facebook", 4: "Amazon", 5: "Flipkart"}    
+dict_demo.popitem()    
+print(dict_demo)    
+
+Output
+
+{1: 'Hcl', 2: 'WIPRO', 3: 'Facebook'}
+
+keys()
+
+dict = {1: "Hcl", 2: "WIPRO", 3: "Facebook", 4: "Amazon", 5: "Flipkart"}    
+print(dict_demo.keys())    
+
+Output
+
+dict_keys([1, 2, 3, 4, 5])
+
+items()
+
+
+dict = {1: "Hcl", 2: "WIPRO", 3: "Facebook", 4: "Amazon", 5: "Flipkart"}    
+print(dict_demo.items())    
+
+Output
+
+dict_items([(1, 'Hcl'), (2, 'WIPRO'), (3, 'Facebook'), (4, 'Amazon'), (5, 'Flipkart')])
+
+get()
+
+
+dict = {1: "Hcl", 2: "WIPRO", 3: "Facebook", 4: "Amazon", 5: "Flipkart"}    
+print(dict_demo.get(3))    
+
+Output
+
+Facebook
+
+update()
+
+dict = {1: "Hcl", 2: "WIPRO", 3: "Facebook", 4: "Amazon", 5: "Flipkart"}    
+dict_demo.update({3: "TCS"})    
+print(dict_demo)    
+
+Output
+
+{1: 'Hcl', 2: 'WIPRO', 3: 'TCS'}
+
+values()
+
+dict = {1: "Hcl", 2: "WIPRO", 3: "Facebook", 4: "Amazon", 5: "Flipkart"}    
+print(dict_demo.values())    
+
+Output
+
+dict_values(['Hcl', 'WIPRO', 'TCS'])
+
+
+15 functions
+
+# Example Python Code for User-Defined function  
+def square( num ):    
+    """  
+    This function computes the square of the number.  
+    """    
+    return num**2     
+object_ = square(6)    
+print( "The square of the given number is: ", object_ )    
+
+Output:
+
+The square of the given number is:  36
+
+Calling a Function
+
+def a_function( string ):    
+    "This prints the value of length of string"    
+    return len(string)    
+    
+print( "Length of the string Functions is: ", a_function( "Functions" ) )    
+print( "Length of the string Python is: ", a_function( "Python" ) )    
+
+Output:
+
+Length of the string Functions is:  9
+Length of the string Python is:  6
+
+Pass by Reference vs. Pass by Value
+
+
+def square( item_list ):    
+    '''''''This function will find the square of items in the list'''    
+    squares = [ ]    
+    for l in item_list:    
+        squares.append( l**2 )    
+    return squares    
+    
+my_list = [17, 52, 8];    
+my_result = square( my_list )    
+print( "Squares of the list are: ", my_result )    
+
+Output:
+
+Squares of the list are:  [289, 2704, 64]
+
+Default arguments
+Keyword arguments
+Required arguments
+Variable-length arguments
+
+1) Default Arguments
+
+def function( n1, n2 = 20 ):    
+    print("number 1 is: ", n1)    
+    print("number 2 is: ", n2)    
+    
+     
+print( "Passing only one argument" )    
+function(30)    
+    
+print( "Passing two arguments" )    
+function(50,30)    
+
+Output:
+
+Passing only one argument
+number 1 is:  30
+number 2 is:  20
+Passing two arguments
+number 1 is:  50
+number 2 is:  30
+
+2) Keyword Arguments
+
+def function( n1, n2 ):    
+    print("number 1 is: ", n1)    
+    print("number 2 is: ", n2)    
+    
+print( "Without using keyword" )    
+function( 50, 30)       
+        
+print( "With using keyword" )    
+function( n2 = 50, n1 = 30)    
+
+Output:
+
+Without using keyword
+number 1 is:  50
+number 2 is:  30
+With using keyword
+number 1 is:  30
+number 2 is:  50
+
+3) Required Arguments
+
+def function( n1, n2 ):    
+    print("number 1 is: ", n1)    
+    print("number 2 is: ", n2)    
+    
+print( "Passing out of order arguments" )    
+function( 30, 20 )       
+    
+print( "Passing only one argument" )    
+
+try:    
+    function( 30 )    
+except:    
+    print( "Function needs two positional arguments" )  
+
+Output:
+
+Passing out of order arguments
+number 1 is:  30
+number 2 is:  20
+Passing only one argument
+Function needs two positional arguments
+
+4) Variable-Length Arguments
+
+def function( *args_list ):    
+    ans = []    
+    for l in args_list:    
+        ans.append( l.upper() )    
+    return ans    
+object = function('Python', 'Functions', 'tutorial')    
+print( object )    
+    
+def function( **kargs_list ):    
+    ans = []    
+    for key, value in kargs_list.items():    
+        ans.append([key, value])    
+    return ans    
+object = function(First = "Python", Second = "Functions", Third = "Tutorial")    
+print(object)    
+
+Output:
+
+['PYTHON', 'FUNCTIONS', 'TUTORIAL']
+[['First', 'Python'], ['Second', 'Functions'], ['Third', 'Tutorial']]
+
+return Statement
+
+def square( num ):    
+    return num**2    
+     
+print( "With return statement" )    
+print( square( 52 ) )    
+    
+def square( num ):    
+     num**2     
+    
+print( "Without return statement" )    
+print( square( 52 ) )    
+
+Output:
+
+With return statement
+2704
+Without return statement
+None
+
+
+Lambda functions 
+
+lambda_ = lambda argument1, argument2: argument1 + argument2;    
+    
+print( "Value of the function is : ", lambda_( 20, 30 ) )    
+print( "Value of the function is : ", lambda_( 40, 50 ) )    
+
+Output:
+
+Value of the function is :  50
+Value of the function is :  90
+
+
+Scope and Lifetime of Variables
+
+
+def number( ):    
+    num = 50    
+    print( "Value of num inside the function: ", num)    
+    
+num = 10    
+number()    
+print( "Value of num outside the function:", num)    
+
+Output:
+
+Value of num inside the function:  50
+Value of num outside the function: 10
+
+Python Capability inside Another Capability
+
+
+def word():    
+    string = 'Python functions tutorial'    
+    x = 5     
+    def number():    
+        print( string )   
+        print( x )  
+             
+    number()    
+word()    
+
+Output:
+
+Python functions tutorial
+5
+
+
+
+16 built in functions
+
+
+
+Python abs() Function Example
+
+integer = -20  
+print('Absolute value of -40 is:', abs(integer))  
+  
+floating = -20.83  
+print('Absolute value of -40.83 is:', abs(floating))  
+
+Output:
+
+Absolute value of -20 is: 20
+Absolute value of -20.83 is: 20.83
+
+
+Python all() Function Example
+
+k = [1, 3, 4, 6]  
+print(all(k))  
+  
+k = [0, False]  
+print(all(k))  
+  
+k = [1, 3, 7, 0]  
+print(all(k))  
+  
+k = [0, False, 5]  
+print(all(k))  
+  
+k = []  
+print(all(k))  
+
+Output:
+
+True
+False
+False
+False
+True
+
+Python bin() Function Example
+
+x =  10  
+y =  bin(x)  
+print (y)  
+
+Output:
+
+0b1010
+
+Python bool() Example
+
+test1 = []  
+print(test1,'is',bool(test1))  
+test1 = [0]  
+print(test1,'is',bool(test1))  
+test1 = 0.0  
+print(test1,'is',bool(test1))  
+test1 = None  
+print(test1,'is',bool(test1))  
+test1 = True  
+print(test1,'is',bool(test1))  
+test1 = 'Easy string'  
+print(test1,'is',bool(test1))  
+Output:
+
+[] is False
+[0] is True
+0.0 is False
+None is False
+True is True
+Easy string is True
+
+
+
+Python bytes() Example
+
+string = "Hello World."  
+array = bytes(string, 'utf-8')  
+print(array)  
+
+Output:
+
+b ' Hello World.'
+
+Python callable() Function Example
+
+x = 8  
+print(callable(x))  
+
+Output:
+
+False
+
+
+Python compile() Function Example
+
+code_str = 'x=5\ny=10\nprint("sum =",x+y)'  
+code = compile(code_str, 'sum.py', 'exec')  
+print(type(code))  
+exec(code)  
+exec(x)  
+
+Output:
+
+<class 'code'>
+sum = 15
+
+
+Python exec() Function Example
+
+x = 8  
+exec('print(x==8)')  
+exec('print(x+4)')  
+
+Output:
+
+True
+12
+
+Python sum() Function Example
+
+s = sum([1, 2,4 ])  
+print(s)  
+  
+s = sum([1, 2, 4], 10)  
+print(s)  
+
+Output:
+7
+17
+
+Python any() Function Example
+
+l = [4, 3, 2, 0]                              
+print(any(l))                                   
+  
+l = [0, False]  
+print(any(l))  
+  
+l = [0, False, 5]  
+print(any(l))  
+  
+l = []  
+print(any(l))  
+
+Output:
+
+True
+False
+True
+False
+
+Python ascii() Function Example
+
+normalText = 'Python is interesting'  
+print(ascii(normalText))  
+  
+otherText = 'Pythön is interesting'  
+print(ascii(otherText))  
+  
+print('Pyth\xf6n is interesting')  
+
+Output:
+
+'Python is interesting'
+'Pyth\xf6n is interesting'
+Pythön is interesting
+
+
+Python bytearray() Example
+
+string = "Python is a programming language."  
+  
+# string with encoding 'utf-8'  
+arr = bytearray(string, 'utf-8')  
+print(arr)  
+
+Output:
+
+bytearray(b'Python is a programming language.')
+
+Python eval() Function Example
+
+x = 8  
+print(eval('x + 1'))  
+Output:
+
+9
+
+Python float() Example
+
+print(float(9))  
+  
+print(float(8.19))  
+  
+print(float("-24.27"))  
+  
+print(float("     -17.19\n"))  
+  
+print(float("xyz"))  
+
+Output:
+
+9.0
+8.19
+-24.27
+-17.19
+ValueError: could not convert string to float: 'xyz'
+
+Python format() Function Example
+
+# d, f and b are a type  
+  
+print(format(123, "d"))  
+  
+print(format(123.4567898, "f"))  
+  
+print(format(12, "b"))  
+
+Output:
+
+123
+123.456790
+1100
+
+
+Python frozenset() Example
+
+letters = ('m', 'r', 'o', 't', 's')  
+  
+fSet = frozenset(letters)  
+print('Frozen set is:', fSet)  
+print('Empty frozen set is:', frozenset())  
+
+Output:
+
+Frozen set is: frozenset({'o', 'm', 's', 'r', 't'})
+Empty frozen set is: frozenset()
+
+Python getattr() Function Example
+
+class Details:  
+    age = 22  
+    name = "Phill"  
+  
+details = Details()  
+print('The age is:', getattr(details, "age"))  
+print('The age is:', details.age)  
+
+Output:
+
+The age is: 22
+The age is: 22
+
+Python globals() Function Example
+
+age = 22  
+  
+globals()['age'] = 22  
+print('The age is:', age)  
+
+Output:
+
+The age is: 22
+
+Python hasattr() Function Example
+
+l = [4, 3, 2, 0]                              
+print(any(l))                                   
+  
+l = [0, False]  
+print(any(l))  
+  
+l = [0, False, 5]  
+print(any(l))  
+  
+l = []  
+print(any(l))  
+
+Output:
+
+True
+False
+True
+False
+
+Python iter() Function Example
+
+list = [1,2,3,4,5]  
+  
+listIter = iter(list)  
+  
+print(next(listIter))  
+  
+print(next(listIter))  
+  
+print(next(listIter))  
+  
+print(next(listIter))  
+  
+print(next(listIter))  
+
+Output:
+
+1
+2
+3
+4
+5
+
+Python len() Function Example
+
+strA = 'Python'  
+print(len(strA))  
+
+Output:
+
+6
+
+
+Python list() Example
+
+print(list())  
+  
+String = 'abcde'       
+print(list(String))  
+  
+Tuple = (1,2,3,4,5)  
+print(list(Tuple))  
+
+List = [1,2,3,4,5]  
+print(list(List))  
+
+Output:
+
+[]
+['a', 'b', 'c', 'd', 'e']
+[1,2,3,4,5]
+[1,2,3,4,5]
+
+Python locals() Function Example
+
+
+def localsAbsent():  
+    return locals()  
+  
+def localsPresent():  
+    present = True  
+    return locals()  
+  
+print('localsNotPresent:', localsAbsent())  
+print('localsPresent:', localsPresent())  
+
+Output:
+
+localsAbsent: {}
+localsPresent: {'present': True}
+
+Python map() Function Example
+
+def calculateAddition(n):  
+  return n+n  
+  
+numbers = (1, 2, 3, 4)  
+result = map(calculateAddition, numbers)  
+print(result)  
+  
+numbersAddition = set(result)  
+print(numbersAddition)  
+
+Output:
+
+<map object at 0x7fb04a6bec18>
+{8, 2, 4, 6}
+
+Python memoryview () Function Example
+
+ 
+mv = memoryview(randomByteArray)  
+  
+print(mv[0])  
+  
+print(bytes(mv[0:2]))  
+  
+print(list(mv[0:3]))  
+
+Output:
+
+65
+b'AB'
+[65, 66, 67]
+
+Python object() Example
+
+python = object()  
+  
+print(type(python))  
+print(dir(python))  
+
+Output:
+
+<class 'object'>
+['__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', 
+'__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__ne__', 
+'__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', 
+'__str__', '__subclasshook__']
+
+Python open() Function Example
+
+# opens python.text file of the current directory  
+f = open("python.txt")  
+# specifying full path  
+f = open("C:/Python33/README.txt")  
+
+Output:
+
+Since the mode is omitted, the file is opened in 'r' mode; opens for reading.
+
+Python chr() Function Example
+
+result = chr(102) # It returns string representation of a char  
+result2 = chr(112)  
+print(result)  
+print(result2)  
+print("is it string type:", type(result) is str)  
+
+Output:
+
+ValueError: chr() arg not in range(0x110000)
+
+
+Python complex() Example
+
+a = complex(1) # Passing single parameter  
+b = complex(1,2) # Passing both parameters  
+print(a)  
+print(b)  
+
+Output:
+
+(1.5+0j)
+(1.5+2.2j)
+
+
+Python delattr() Function Example
+
+class Student:  
+    id = 101  
+    name = "Pranshu"  
+    email = "pranshu@abc.com"  
+    def getinfo(self):  
+        print(self.id, self.name, self.email)  
+s = Student()  
+s.getinfo()  
+delattr(Student,'course') # Removing attribute which is not available  
+s.getinfo() # error: throws an error  
+
+Output:
+
+101 Pranshu pranshu@abc.com
+AttributeError: course
+
+
+Python dir() Function Example
+
+att = dir()  
+print(att)  
+
+Output:
+
+['__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', 
+'__name__', '__package__', '__spec__']
+
+
+Python divmod() Function Example
+
+result = divmod(10,2)  
+print(result)  
+
+Output:
+
+(5, 0)
+
+Python enumerate() Function Example
+
+result = enumerate([1,2,3])  
+print(result)  
+print(list(result))  
+
+Output:
+
+<enumerate object at 0x7ff641093d80>
+[(0, 1), (1, 2), (2, 3)]
+
+Python dict() Example
+
+result = dict() # returns an empty dictionary  
+result2 = dict(a=1,b=2)  
+print(result)  
+print(result2)  
+
+Output:
+
+{}
+{'a': 1, 'b': 2}
+
+Python filter() Function Example
+
+def filterdata(x):  
+    if x>5:  
+        return x  
+result = filter(filterdata,(1,2,6))  
+print(list(result))  
+
+Output:
+
+[6]
+
+Python hash() Function Example
+
+result = hash(21) # integer value  
+result2 = hash(22.2) # decimal value  
+print(result)  
+print(result2)  
+
+Output:
+
+21
+461168601842737174
+
+Python help() Function Example
+
+info = help() # No argument  
+print(info)  
+
+Output:
+
+Welcome to Python 3.5's help utility!
+
+Python min() Function Example
+
+small = min(2225,325,2025) # returns smallest element  
+small2 = min(1000.25,2025.35,5625.36,10052.50)  
+print(small)  
+print(small2)  
+
+Output:
+
+325
+1000.25
+
+
+Python set() Function Example
+
+result = set() # empty set  
+result2 = set('12')  
+result3 = set('javatpoint')  
+print(result)  
+print(result2)  
+print(result3)  
+
+Output:
+
+set()
+{'1', '2'}
+{'a', 'n', 'v', 't', 'j', 'p', 'i', 'o'}
+
+
+Python hex() Function Example
+
+result = hex(1)   
+result2 = hex(342)   
+print(result)  
+print(result2)  
+
+Output:
+
+0x1
+0x156
+
+Python id() Function Example
+
+val = id("Javatpoint") # string object  
+val2 = id(1200) # integer object  
+val3 = id([25,336,95,236,92,3225]) # List object  
+print(val)  
+print(val2)  
+print(val3)  
+
+Output:
+
+139963782059696
+139963805666864
+139963781994504
+
+Python setattr() Function Example
+
+class Student:  
+    id = 0  
+    name = ""  
+      
+    def __init__(self, id, name):  
+        self.id = id  
+        self.name = name  
+          
+student = Student(102,"Sohan")  
+print(student.id)  
+print(student.name)  
+setattr(student, 'email','sohan@abc.com') # adding new attribute  
+print(student.email)  
+
+Output:
+
+102
+Sohan
+sohan@abc.com
+
+Python slice() Function Example
+
+result = slice(5) # returns slice object  
+result2 = slice(0,5,3) # returns slice object  
+print(result)  
+print(result2)  
+
+Output:
+
+slice(None, 5, None)
+slice(0, 5, 3)
+
+Python sorted() Function Example
+
+str = "javatpoint" # declaring string  
+sorted1 = sorted(str) # sorting string  
+print(sorted1)  
+
+Output:
+
+['a', 'a', 'i', 'j', 'n', 'o', 'p', 't', 't', 'v']
+
+Python next() Function Example
+
+number = iter([256, 32, 82]) # Creating iterator  
+item = next(number)   
+print(item)  
+item = next(number)  
+print(item)  
+item = next(number)  
+print(item)  
+
+Output:
+
+256
+32
+82
+
+Python input() Function Example
+
+val = input("Enter a value: ")  
+print("You entered:",val)  
+
+Output:
+
+Enter a value: 45
+You entered: 45
+
+Python int() Function Example
+
+val = int(10) # integer value  
+val2 = int(10.52) # float value  
+val3 = int('10') # string value  
+print("integer values :",val, val2, val3)  
+
+Output:
+
+integer values : 10 10 10
+
+
+Python isinstance() function Example
+
+class Student:  
+    id = 101  
+    name = "John"  
+    def __init__(self, id, name):  
+        self.id=id  
+        self.name=name  
+  
+student = Student(1010,"John")  
+lst = [12,34,5,6,767]  
+print(isinstance(student, Student)) # isinstance of Student class  
+print(isinstance(lst, Student))  
+
+Output:
+
+True
+False
+
+Python oct() function Example
+
+val = oct(10)  
+print("Octal value of 10:",val)  
+
+Output:
+
+Octal value of 10: 0o12
+
+
+Python ord() function Example
+
+print(ord('8'))  
+print(ord('R'))  
+  
+print(ord('&'))  
+
+Output:
+
+56
+82
+38
+
+
+Python pow() function Example
+
+print(pow(4, 2))  
+  
+print(pow(-4, 2))  
+  
+print(pow(4, -2))  
+  
+print(pow(-4, -2))  
+
+Output:
+
+16
+16
+0.0625
+0.0625
+
+
+Python print() function Example
+
+print("Python is programming language.")  
+  
+x = 7  
+print("x =", x)  
+  
+y = x  
+print('x =', x, '= y')  
+
+Output:
+
+Python is programming language.
+x = 7
+x = 7 = y
+
+Python range() function Example
+
+print(list(range(0)))  
+print(list(range(4)))  
+  
+print(list(range(1,7 )))  
+
+Output:
+
+[]
+[0, 1, 2, 3]
+[1, 2, 3, 4, 5, 6]
+
+Python reversed() function Example
+
+String = 'Java'  
+print(list(reversed(String)))  
+  
+Tuple = ('J', 'a', 'v', 'a')  
+print(list(reversed(Tuple)))  
+  
+Range = range(8, 12)  
+print(list(reversed(Range)))  
+  
+List = [1, 2, 7, 5]  
+print(list(reversed(List)))  
+
+Output:
+
+['a', 'v', 'a', 'J']
+['a', 'v', 'a', 'J']
+[11, 10, 9, 8]
+[5, 7, 2, 1]
+
+
+Python round() Function Example
+
+print(round(10))  
+  
+print(round(10.8))  
+  
+print(round(6.6))  
+
+Output:
+
+10
+11
+7
+
+Python issubclass() Function Example
+
+class Rectangle:  
+  def __init__(rectangleType):  
+    print('Rectangle is a ', rectangleType)  
+  
+class Square(Rectangle):  
+  def __init__(self):  
+    Rectangle.__init__('square')  
+      
+print(issubclass(Square, Rectangle))  
+print(issubclass(Square, list))  
+print(issubclass(Square, (list, Rectangle)))  
+print(issubclass(Rectangle, (list, Rectangle)))  
+
+Output:
+
+True
+False
+True
+True
+
+Python str() Function Example
+
+str('4')  
+
+Output:
+
+'4'
+
+Python tuple() Function Example
+
+t1 = tuple()  
+print('t1=', t1)  
+  
+t2 = tuple([1, 6, 9])  
+print('t2=', t2)  
+  
+t1 = tuple('Java')  
+print('t1=',t1)  
+  
+t1 = tuple({4: 'four', 5: 'five'})  
+print('t1=',t1)  
+
+Output:
+
+t1= ()
+t2= (1, 6, 9)
+t1= ('J', 'a', 'v', 'a')
+t1= (4, 5)
+
+Python type() Function Example
+
+List = [4, 5]  
+print(type(List))  
+  
+Dict = {4: 'four', 5: 'five'}  
+print(type(Dict))  
+  
+class Python:  
+    a = 0  
+  
+InstanceOfPython = Python()  
+print(type(InstanceOfPython))  
+
+Output:
+
+<class 'list'>
+<class 'dict'>
+<class '__main__.Python'>
+
+Python vars() Function Example
+
+class Python:  
+  def __init__(self, x = 7, y = 9):  
+    self.x = x  
+    self.y = y  
+    
+InstanceOfPython = Python()  
+print(vars(InstanceOfPython))  
+
+Output:
+
+{'y': 9, 'x': 7}
+
+Python zip() Function Example
+
+numList = [4,5, 6]  
+strList = ['four', 'five', 'six']  
+  
+result = zip()  
+resultList = list(result)  
+print(resultList)  
+  
+result = zip(numList, strList)  
+  
+resultSet = set(result)  
+print(resultSet)  
+
+Output:
+
+[]
+{(5, 'five'), (4, 'four'), (6, 'six')}
+
+
+
+
+
+17 lambdas
+
+
+
+
+Example
+
+# Code to demonstrate how we can use a lambda function for adding 4 numbers  
+add = lambda num: num + 4    
+print( add(6) )    
+
+Output:
+
+10
+
+
+Code 2:
+
+Now we gave an example of a lambda function that adds 4 to the input number using the add function. The code is shown below -
+
+def add( num ):  
+   return num + 4  
+print( add(6) )  
+
+Output:
+
+
+10
+
+Now we gave an example of a lambda function that multiply 2 numbers and return one result. The code is shown below -
+
+a = lambda x, y : (x * y)  
+print(a(4, 5))  
+
+Output:
+
+
+20
+
+Program Code 4:
+
+
+a = lambda x, y, z : (x + y + z)  
+print(a(4, 5, 5))  
+
+Output:
+
+
+14
+
+What's the Distinction Between Lambda and Def Functions?
+
+Program Code:
+
+def reciprocal( num ):  
+    return 1 / num  
+   
+lambda_reciprocal = lambda num: 1 / num  
+   
+print( "Def keyword: ", reciprocal(6) )  
+   
+print( "Lambda keyword: ", lambda_reciprocal(6) )  
+
+Output:
+
+Def keyword:  0.16666666666666666
+Lambda keyword:  0.16666666666666666
+
+
+
+Using Lambda Function with filter()
+Program Code:
+
+list_ = [35, 12, 69, 55, 75, 14, 73]      
+odd_list = list(filter( lambda num: (num % 2 != 0) , list_ ))      
+print('The list of odd number is:',odd_list)    
+
+Output:
+
+
+The list of odd number is: [35, 69, 55, 75, 73]
+
+Using Lambda Function with map()
+
+Program Code:
+
+numbers_list = [2, 4, 5, 1, 3, 7, 8, 9, 10]      
+squared_list = list(map( lambda num: num ** 2 , numbers_list ))      
+print( 'Square of each number in the given list:' ,squared_list )    
+
+Output:
+
+Square of each number in the given list: [4, 16, 25, 1, 9, 49, 64, 81, 100]
+
+
+Using Lambda Function with List Comprehension
+
+Code
+
+squares = [lambda num = num: num ** 2 for num in range(0, 11)]       
+for square in squares:    
+       print('The square value of all numbers from 0 to 10:',square(), end = " ")    
+Output:
+
+
+The square value of all numbers from 0 to 10: 0 1 4 9 16 25 36 49 64 81 100 
+
+Using Lambda Function with if-else
+We will use the lambda function with the if-else block. In the program code below, we check which number is greater than the given two numbers using the if-else block.
+
+Program Code:
+
+
+Minimum = lambda x, y : x if (x < y) else y       
+print('The greater number is:', Minimum( 35, 74 ))    
+
+Output:
+
+The greater number is: 35
+
+Using Lambda with Multiple Statements
+
+code
+  
+my_List = [ [3, 5, 8, 6], [23, 54, 12, 87], [1, 2, 4, 12, 5] ]      
+sort_List = lambda num : ( sorted(n) for n in num )      
+third_Largest = lambda num, func : [ l[ len(l) - 2] for l in func(num)]    
+result = third_Largest( my_List, sort_List)      
+print('The third largest number from every sub list is:', result )    
+
+Output:
+
+The third largest number from every sub list is: [6, 54, 5]
+
+18 files
+
+Opening a file
+
+Program code for read mode:
+
+
+fileptr = open("file.txt","r")    
+if fileptr:    
+    print("file is opened successfully")    
+
+Output:
+
+<class '_io.TextIOWrapper'>
+file is opened successfully
+
+Program code for Write Mode:
+
+file = open('file.txt','w')  
+file.write("Here we write a command")  
+file.write("Hello users of JAVATPOINT")  
+file.close()  
+
+Output:
+
+
+> Hi  
+ERROR!  
+Traceback (most recent call last):  
+  File "<stdin>", line 1, in <module>  
+NameError: name 'Hi' is not defined  
+
+The close() Method
+
+fileptr = open("file.txt","r")    
+    
+if fileptr:    
+    print("The existing file is opened successfully in Python")    
+    
+fileptr.close()  
+
+
+
+try:  
+   fileptr = open("file.txt")  
+finally:  
+   fileptr.close()  
+
+The with statement
+
+
+with open("file.txt",'r') as f:    
+    content = f.read();    
+    print(content)
+    
+Program code 2 for with statement:
+
+with open("file.txt", "H") as f:  
+   A = f.write("Hello Coders")  
+   Print(A)  
+
+
+Writing the file
+
+Program code 1 for Write Method:
+
+# open the file.txt in append mode. Create a new file if no such file exists.  
+fileptr = open("file2.txt", "w")  
+  
+# appending the content to the file  
+fileptr.write(''''''''Python is the modern programming language. It is done any kind of program in shortest way.''')  
+  
+# closing the opened the file  
+fileptr.close()  
+
+Output:
+
+File2.txt
+Python is the modern programming language. It is done any kind of program in shortest way.
+We have opened the file in w mode. The file1.txt file doesn't exist, it created a new file and we have written the content in the file 
+using the write() function
+
+
+with open(test1.txt', 'w') as file2:  
+    file2.write('Hello coders')  
+    fil2.write('Welcome to javaTpoint')  
+
+Output:
+
+Hello coders
+Welcome to javaTpoint
+
+Program code 3 for Write Method:
+
+fileptr = open("file2.txt","a")  
+fileptr.write(" Python has an easy syntax and user-friendly interaction.")    
+fileptr.close()  
+
+Output:
+
+Python is the modern day language. It makes things so simple.
+It is the fastest growing language Python has an easy syntax and user-friendly interaction.
+Snapshot of the file2.txt
+
+
+Python File Handling
+
+Program code for read() Method:
+
+Here we write the program code for read() method in Python. The code is given below -
+
+fileptr = open("file2.txt","r")  
+content = fileptr.read(10)   
+print(type(content))      
+print(content)       
+fileptr.close()    
+
+Output:
+
+<class 'str'>
+Python is 
+
+content = fileptr.read()  
+print(content)   
+
+Output:
+
+Python is the modern-day language. It makes things so simple.
+It is the fastest-growing programming language Python has easy an syntax and user-friendly interaction.
+
+Read file through for loop
+
+Program code 1 for Read File using For Loop:
+
+fileptr = open("file2.txt","r");     
+for i in fileptr:    
+    print(i) # i contains each line of the file     
+Output:
+
+Python is the modern day language.
+It makes things so simple.
+Python has easy syntax and user-friendly interaction.
+
+Program code 2 for Read File using For Loop:
+
+Here we give an example of read file using for loop. The code is given below -
+
+A = ["Hello\n", "Coders\n", "JavaTpoint\n"]  
+f1 = open('myfile.txt', 'w')  
+f1.writelines(A)  
+f1.close()  
+f1 = open('myfile.txt', 'r')  
+Lines = f1.read()  
+count = 0  
+for line in Lines:  
+    count += 1  
+    print("Line{}: {}".format(count, line.strip()))  
+
+Output:
+
+Line1: H
+Line2: e
+Line3: l
+......
+Line21: i
+Line22: n
+Line23: t
+Line24: 
+
+Read Lines of the file
+
+fileptr = open("file2.txt","r");     
+content = fileptr.readline()     
+content1 = fileptr.readline()  
+print(content)     
+print(content1)  
+fileptr.close()    
+
+Output:
+
+
+Python is the modern day language.
+It makes things so simple.
+
+Example 2:
+
+fileptr = open("file2.txt","r");     
+content = fileptr.readlines()     
+  
+print(content)     
+    
+fileptr.close()    
+
+Output:
+
+['Python is the modern day language.\n', 'It makes things so simple.\n', 'Python has easy syntax and user-friendly interaction.']
+
+Example 3:
+
+A = ["Hello\n", "Coders\n", "JavaTpoint\n"]  
+f1 = open('myfile.txt', 'w')  
+f1.writelines(A)  
+f1.close()  
+f1 = open('myfile.txt', 'r')  
+Lines = f1.readlines()  
+count = 0  
+for line in Lines:  
+    count += 1  
+    print("Line{}: {}".format(count, line.strip()))  
+
+Output:
+
+
+Line1: Hello
+Line2: Coders
+Line3: JavaTpoint
+
+Creating a new file
+
+file = open(path_to_file, mode)
+
+fileptr = open("file2.txt","x")   
+print(fileptr)    
+if fileptr:    
+    print("File created successfully")  
+
+Output:
+
+<_io.TextIOWrapper name='file2.txt' mode='x' encoding='cp1252'>
+File created successfully 
+
+Program code2 for creating a new file:
+
+try:  
+    with open('file1.txt', 'w') as f:  
+        f.write('Here we create a new file')  
+except FileNotFoundError:  
+    print("The file is does not exist")  
+
+Output:
+
+The file is does not exist
+
+File Pointer positions
+
+fileptr = open("file2.txt","r")    
+print("The filepointer is at byte :",fileptr.tell())    
+content = fileptr.read();    
+print("After reading, the filepointer is at:",fileptr.tell())    
+
+Output:
+
+The filepointer is at byte : 0
+After reading, the filepointer is at: 117
+
+Program code2 for File Pointer Position:
+
+file = open("File2.txt", "r")  
+print("The pointer position is: ", file.tell())  
+
+Output:
+
+  The pointer position is: 0
+  
+Modifying file pointer position
+
+fileptr = open("file2.txt","r")    
+print("The filepointer is at byte :",fileptr.tell())    
+fileptr.seek(10);    
+print("After reading, the filepointer is at:",fileptr.tell())    
+
+Output:
+
+
+The filepointer is at byte : 0
+After reading, the filepointer is at: 10
+Python OS module:
+
+
+import os    
+    
+os.rename("file2.txt","file3.txt")  
+
+Output:
+
+The above code renamed current file2.txt to file3.txt
+
+
+import os  
+def main():  
+    i = 0  
+    path="D:/JavaTpoint/"  
+    for filename in os.listdir(path):  
+        destination = "new" + str(i) + ".png"  
+        source = path + filename  
+        destination = path + destination  
+        os.rename(source, destination)  
+        i += 1  
+  
+if __name__ == '__main__':  
+    main()  
+
+Removing the file
+
+import os;    
+os.remove("file3.txt")    
+
+Output:
+
+
+    The file named file3.txt is deleted.
+
+Program code 2 for remove() Method:
+
+import os  
+if os.path.exists("file3.txt "):  
+  os.remove("file3.txt ")  
+else:  
+  print("This file is not existed")  
+
+Output:
+
+    This file is not existed
+
+Creating the new directory
+
+os.mkdir (path, mode = 0o777, *, dir_fd = None)  
+
+Output:
+
+Parameter:
+
+Program code 1 for mkdir() Method:
+
+import os    
+os.mkdir("new")    
+
+Output:
+
+Create a new dictionary which is named new
+
+Program code 2 for mkdir() Method:
+
+import os  
+path = '/D:/JavaTpoint'   
+try:  
+    os.mkdir(path)  
+except OSError as error:  
+    print(error)    
+
+Output:
+
+Now we compile the above code in Python, and after successful compilation, we run it. Then the output is given below -
+
+ [Error 20] File exists: '/D:/JavaTpoint' 
+ 
+The getcwd() method:
+
+os.getcwd()  
+
+Program code 1 for getcwd() Method:
+
+
+import os  
+os.getcwd()  
+
+Output:
+
+'C:\\Users\\DEVANSH SHARMA'
+
+Program code 2 for getcwd() Method:
+
+import os   
+c = os.getcwd()   
+print("The working directory is:", c)  
+
+Output:
+
+The working directory is: C:\\Users\\JavaTpoint
+
+Changing the current working directory
+
+Program code 1 for chdir() Method:
+
+import os   
+os.chdir("C:\\Users\\DEVANSH SHARMA\\Documents")  
+os.getcwd()  
+
+Output:
+
+'C:\\Users\\DEVANSH SHARMA\\Documents'
+
+Program code 2 for chdir() Method:
+
+import os  
+os.chdir(r"C:\Users\JavaTpoint")  
+print("Currently working directory is changed")  
+
+Output:
+
+Currently working directory is changed
+
+Deleting directory:
+
+Program code 1 for rmdir() Method:
+
+import os  
+os.rmdir("directory_name")    
+
+Output:
+
+It will remove the specified directory.
+
+Program code 2 for rmdir() Method:
+
+import os  
+directory = "JavaTpoint"  
+parent = "/D:/User/Documents"  
+path = os.path.join(parent, directory)  
+os.rmdir(path)  
+print("The directory '%s' is successfully removed", %directory)  
+
+Output:
+
+The directory 'JavaTpoint' is successfully removed
+
+import os  
+dir = "JavaTpoint"  
+parent = "/D:/User/Documents"  
+path = os.path.join(parent, dir)  
+try:  
+    os.rmdir(path)  
+    print("The directory '%s' is successfully removed", %dir)  
+except OSError as error:  
+    print(error)  
+    print("The directory '%s' cannot be removed successfully", %dir)  
+
+Output:
+
+[Error 30] Permission denied: '/D:/User/Documents/JavaTpoint'
+The directory 'JavaTpoint' cannot be removed successfully
+
+Writing Python output to the files:
+
+Program code:
+
+file1.py
+
+temperatures=[10,-20,-289,100]    
+def c_to_f(c):    
+    if c< -273.15:    
+        return "That temperature doesn't make sense!"    
+    else:    
+        f=c*9/5+32    
+        return f    
+for t in temperatures:    
+    print(c_to_f(t))    
+
+file.py
+
+import subprocess    
+    
+with open("output.txt", "wb") as f:    
+    subprocess.check_call(["python", "file.py"], stdout=f)  
+
+
+19 modules
+
+
+
+20 exceptions
+
+
+Try and Except Statement - Catching Exceptions
+
+Code
+
+# Python code to catch an exception and handle it using try and except code blocks  
+   
+a = ["Python", "Exceptions", "try and except"]  
+try:  
+    #looping through the elements of the array a, choosing a range that goes beyond the length of the array  
+     for i in range( 4 ):  
+        print( "The index and element from the array is", i, a[i] )  
+#if an error occurs in the try block, then except block will be executed by the Python interpreter       
+except:  
+    print ("Index out of range")  
+Output:
+
+The index and element from the array is 0 Python
+The index and element from the array is 1 Exceptions
+The index and element from the array is 2 try and except
+Index out of range
+The code blocks that potentially produce an error are inserted inside the try clause in the preceding example. The value of i greater than 2 attempts to access the list's item beyond its length, which is not present, resulting in an exception. The except clause then catches this exception and executes code without stopping it.
+
+How to Raise an Exception
+
+Code
+
+
+#Python code to show how to raise an exception in Python  
+num = [3, 4, 5, 7]  
+if len(num) > 3:  
+    raise Exception( f"Length of the given list must be less than or equal to 3 but is {len(num)}" )  
+Output:
+
+      1 num = [3, 4, 5, 7]
+      2 if len(num) > 3:
+----> 3     raise Exception( f"Length of the given list must be less than or equal to 3 but is {len(num)}" )
+
+Exception: Length of the given list must be less than or equal to 3 but is 4
+The implementation stops and shows our exception in the output, providing indications as to what went incorrect.
+
+
+The assert Statement
+
+Code
+
+#Python program to show how to use assert keyword  
+# defining a function  
+def square_root( Number ):  
+    assert ( Number < 0), "Give a positive integer"  
+    return Number**(1/2)  
+  
+#Calling function and passing the values  
+print( square_root( 36 ) )  
+print( square_root( -36 ) )  
+
+Output:
+
+      7 #Calling function and passing the values
+----> 8 print( square_root( 36 ) )
+      9 print( square_root( -36 ) )
+
+Input In [23], in square_root(Number)
+      3 def square_root( Number ):
+----> 4     assert ( Number < 0), "Give a positive integer"
+      5     return Number**(1/2)
+
+AssertionError: Give a positive integer
+
+Try with Else Clause
+
+Code
+
+# Python program to show how to use else clause with try and except clauses  
+  
+# Defining a function which returns reciprocal of a number  
+def reciprocal( num1 ):  
+    try:  
+        reci = 1 / num1  
+    except ZeroDivisionError:  
+        print( "We cannot divide by zero" )  
+    else:  
+        print ( reci )  
+# Calling the function and passing values  
+reciprocal( 4 )  
+reciprocal( 0 )  
+
+Output:
+
+0.25
+We cannot divide by zero
+
+Finally Keyword in Python
+
+Code
+
+
+try:  
+    div = 4 // 0    
+    print( div )  
+except ZeroDivisionError:  
+    print( "Atepting to divide by zero" )  
+finally:  
+    print( 'This is code of finally clause' )  
+
+Output:
+
+Atepting to divide by zero
+This is code of finally clause
+
+User-Defined Exceptions
+
+Code
+
+class EmptyError( RuntimeError ):  
+   def __init__(self, argument):  
+      self.arguments = argument  
+
+Once the preceding class has been created, the following is how to raise an exception:  
+
+Code  
+
+var = " "  
+try:  
+    raise EmptyError( "The variable is empty" )  
+except (EmptyError, var):  
+    print( var.arguments )  
+Output:
+
+      2 try:
+----> 3     raise EmptyError( "The variable is empty" )
+      4 except (EmptyError, var):
+
+EmptyError: The variable is empty
+
+
+
+21 Classes and Objects
+
+Objects in Python:
+
+Code:
+
+class Person:  
+    def __init__(self, name, age):  
+        self.name = name    
+        self.age = age      
+    def greet(self):  
+        print("Hello, my name is " + self.name)  
+  
+person1 = Person("Ayan", 25)  
+person1.greet()    
+
+Output:
+
+"Hello, my name is Ayan"
+
+The self-parameter
+
+_ _init_ _ method
+In order to make an instance of a class in Python, a specific function called __init__ is called. Although it is used to set the object's attributes, it is often referred to as a constructor.
+
+Class and Instance Variables
+
+Code:
+
+class Person:  
+    count = 0   # This is a class variable  
+  
+    def __init__(self, name, age):  
+        self.name = name    # This is an instance variable  
+        self.age = age  
+        Person.count += 1   # Accessing the class variable using the name of the class  
+
+person1 = Person("Ayan", 25)  
+person2 = Person("Bobby", 30)  
+print(Person.count)     
+
+Output:
+
+2
+
+Code:
+
+class Person:  
+    def __init__(self, name, age):  
+        self.name = name    # This is an instance variable  
+        self.age = age  
+
+person1 = Person("Ayan", 25)  
+person2 = Person("Bobby", 30)  
+print(person1.name)    
+print(person2.age)     
+
+Output:
+
+Ayan
+30
+
+
+22 Constructors
+
+
+Constructors can be of two types.
+
+Parameterized Constructor
+Non-parameterized Constructor
+
+
+Example
+
+class Employee:  
+    def __init__(self, name, id):  
+        self.id = id  
+        self.name = name  
+  
+    def display(self):  
+        print("ID: %d \nName: %s" % (self.id, self.name))  
+  
+  
+emp1 = Employee("John", 101)  
+emp2 = Employee("David", 102)  
+  
+emp1.display()  
+  
+emp2.display()  
+
+Output:
+
+ID: 101 
+Name: John
+ID: 102 
+Name: David
+
+Counting the number of objects of a class
+
+class Student:    
+    count = 0    
+    def __init__(self):    
+        Student.count = Student.count + 1    
+
+s1=Student()    
+s2=Student()    
+s3=Student()    
+print("The number of students:",Student.count)    
+
+Output:
+
+The number of students: 3
+
+Python Non-Parameterized Constructor
+
+class Student:  
+    def __init__(self):  
+        print("This is non parametrized constructor")  
+    def show(self,name):  
+        print("Hello",name)  
+student = Student()  
+student.show("John")      
+
+Python Parameterized Constructor
+
+class Student:  
+    def __init__(self, name):  
+        print("This is parametrized constructor")  
+        self.name = name  
+    def show(self):  
+        print("Hello",self.name)  
+
+student = Student("John")  
+student.show()    
+
+Output:
+
+This is parametrized constructor
+Hello John
+
+Python Default Constructor
+
+class Student:  
+    roll_num = 101  
+    name = "Joseph"  
+  
+    def display(self):  
+        print(self.roll_num,self.name)  
+  
+st = Student()  
+st.display()  
+
+Output:
+
+101 Joseph
+
+More than One Constructor in Single class
+
+Example
+class Student:  
+    def __init__(self):  
+        print("The First Constructor")  
+    def __init__(self):  
+        print("The second contructor")  
+  
+st = Student()  
+
+Output:
+
+The Second Constructor
+
+Note: The constructor overloading is not allowed in Python.
+
+Python built-in class functions
+
+SN	Function	Description
+
+1	getattr(obj,name,default)	It is used to access the attribute of the object.
+2	setattr(obj, name,value)	It is used to set a particular value to the specific attribute of an object.
+3	delattr(obj, name)	It is used to delete a specific attribute.
+4	hasattr(obj, name)	It returns true if the object contains some specific attribute.
+
+Example
+
+class Student:  
+    def __init__(self, name, id, age):  
+        self.name = name  
+        self.id = id  
+        self.age = age  
+  
+# creates the object of the class Student  
+s = Student("John", 101, 22)  
+  
+# prints the attribute name of the object s  
+print(getattr(s, 'name'))  
+  
+# reset the value of attribute age to 23  
+setattr(s, "age", 23)  
+  
+# prints the modified value of age  
+print(getattr(s, 'age'))  
+  
+# prints true if the student contains the attribute with name id  
+  
+print(hasattr(s, 'id'))  
+# deletes the attribute age  
+delattr(s, 'age')  
+  
+# this will give an error since the attribute age has been deleted  
+print(s.age)  
+
+Output:
+
+John
+23
+True
+AttributeError: 'Student' object has no attribute 'age'
+
+Built-in class attributes
+
+The built-in class attributes are given in the below table.
+
+SN	Attribute	Description
+
+1	__dict__	It provides the dictionary containing the information about the class namespace.
+2	__doc__	It contains a string which has the class documentation
+3	__name__	It is used to access the class name.
+4	__module__	It is used to access the module in which, this class is defined.
+5	__bases__	It contains a tuple including all base classes.
+
+class Student:    
+    def __init__(self,name,id,age):    
+        self.name = name;    
+        self.id = id;    
+        self.age = age    
+    def display_details(self):    
+        print("Name:%s, ID:%d, age:%d"%(self.name,self.id))    
+
+s = Student("John",101,22)    
+print(s.__doc__)    
+print(s.__dict__)    
+print(s.__module__)    
+
+Output:
+
+None
+{'name': 'John', 'id': 101, 'age': 22}
+__main__
+
+
+
+23 Inheritance
+
+Example 1
+
+class Animal:  
+    def speak(self):  
+        print("Animal Speaking")  
+
+#child class Dog inherits the base class Animal  
+class Dog(Animal):  
+    def bark(self):  
+        print("dog barking")  
+
+d = Dog()  
+d.bark()  
+d.speak()  
+
+Output:
+
+dog barking
+Animal Speaking
+
+Python Multi-Level inheritance
+
+Example
+
+class Animal:  
+    def speak(self):  
+        print("Animal Speaking")  
+class Dog(Animal):  
+    def bark(self):  
+        print("dog barking")  
+class DogChild(Dog):  
+    def eat(self):  
+        print("Eating bread...")  
+
+d = DogChild()  
+d.bark()  
+d.speak()  
+d.eat()  
+
+Output:
+
+dog barking
+Animal Speaking
+Eating bread...
+
+Python Multiple inheritance
+
+class Calculation1:  
+    def Summation(self,a,b):  
+        return a+b;  
+class Calculation2:  
+    def Multiplication(self,a,b):  
+        return a*b;  
+class Derived(Calculation1,Calculation2):  
+    def Divide(self,a,b):  
+        return a/b;  
+
+d = Derived()  
+print(d.Summation(10,20))  
+print(d.Multiplication(10,20))  
+print(d.Divide(10,20))  
+
+Output:
+
+30
+200
+0.5
+
+The issubclass(sub,sup) method
+
+Example
+
+class Calculation1:  
+    def Summation(self,a,b):  
+        return a+b;  
+class Calculation2:  
+    def Multiplication(self,a,b):  
+        return a*b;  
+class Derived(Calculation1,Calculation2):  
+    def Divide(self,a,b):  
+        return a/b;  
+
+d = Derived()  
+print(issubclass(Derived,Calculation2))  
+print(issubclass(Calculation1,Calculation2))  
+
+Output:
+
+True
+False
+
+The isinstance (obj, class) method
+
+Example
+
+class Calculation1:  
+    def Summation(self,a,b):  
+        return a+b;  
+class Calculation2:  
+    def Multiplication(self,a,b):  
+        return a*b;  
+class Derived(Calculation1,Calculation2):  
+    def Divide(self,a,b):  
+        return a/b;  
+d = Derived()  
+print(isinstance(d,Derived))  
+Output:
+
+True
+
+Method Overriding
+
+class Animal:  
+    def speak(self):  
+        print("speaking")  
+class Dog(Animal):  
+    def speak(self):  
+        print("Barking")  
+
+d = Dog()  
+d.speak()  
+
+Output:
+
+Barking
+
+Real Life Example of method overriding
+
+class Bank:  
+    def getroi(self):  
+        return 10;  
+class SBI(Bank):  
+    def getroi(self):  
+        return 7;  
+class ICICI(Bank):  
+    def getroi(self):  
+        return 8;  
+
+b1 = Bank()  
+b2 = SBI()  
+b3 = ICICI()  
+print("Bank Rate of interest:",b1.getroi());  
+print("SBI Rate of interest:",b2.getroi());  
+print("ICICI Rate of interest:",b3.getroi());  
+
+Output:
+
+Bank Rate of interest: 10
+SBI Rate of interest: 7
+ICICI Rate of interest: 8
+
+Data abstraction in python
+
+class Employee:  
+    __count = 0;  
+    def __init__(self):  
+        Employee.__count = Employee.__count+1  
+    def display(self):  
+        print("The number of employees",Employee.__count)  
+
+emp = Employee()  
+emp2 = Employee()  
+
+try:  
+    print(emp.__count)  
+finally:  
+    emp.display()  
+
+Output:
+
+The number of employees 2
+AttributeError: 'Employee' object has no attribute '__count'
+
+
+24 Abstract classes
+
+ 
+class Car():   
+    def mileage(self):   
+        pass  
+class Tesla(Car):   
+    def mileage(self):   
+        print("The mileage is 30kmph")   
+class Suzuki(Car):   
+    def mileage(self):   
+        print("The mileage is 25kmph ")   
+class Duster(Car):   
+     def mileage(self):   
+          print("The mileage is 24kmph ")   
+class Renault(Car):   
+    def mileage(self):   
+            print("The mileage is 27kmph ")   
+          
+t = Tesla()   
+t.mileage()   
+  
+r = Renault()   
+r.mileage()   
+  
+s = Suzuki()   
+s.mileage()   
+
+d = Duster()   
+d.mileage()  
+
+Output:
+
+The mileage is 30kmph
+The mileage is 27kmph 
+The mileage is 25kmph 
+The mileage is 24kmph
+
+
+Example -
+
+  
+from abc import ABC  
+  
+class Polygon(ABC):   
+   def sides(self):   
+      pass  
+  
+class Triangle(Polygon):   
+   def sides(self):   
+      print("Triangle has 3 sides")   
+  
+class Pentagon(Polygon):   
+   def sides(self):   
+      print("Pentagon has 5 sides")   
+  
+class Hexagon(Polygon):   
+   def sides(self):   
+      print("Hexagon has 6 sides")   
+  
+class Square(Polygon):   
+   def sides(self):   
+      print("I have 4 sides")   
+  
+t = Triangle()   
+t.sides()   
+  
+s = Square()   
+s.sides()   
+  
+p = Pentagon()   
+p.sides()   
+  
+k = Hexagon()   
+K.sides() 
+  
+Output:
+
+Triangle has 3 sides
+Square has 4 sides
+Pentagon has 5 sides
+Hexagon has 6 sides
+
+
+
